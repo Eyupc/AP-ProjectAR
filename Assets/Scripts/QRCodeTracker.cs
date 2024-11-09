@@ -19,7 +19,6 @@ public class QRCodeTracker : MonoBehaviour
 
     private void Update()
     {
-        // Check for QR codes that haven't been updated recently
         List<string> codestoRemove = new List<string>();
         float currentTime = Time.time;
 
@@ -53,7 +52,6 @@ public class QRCodeTracker : MonoBehaviour
 
     private void CreateOrUpdateQRObject(ARTrackedQRImage qrImage)
     {
-        // If we don't have an object for this QR code, create one
         if (!trackedQRObjects.ContainsKey(qrImage.Text))
         {
             GameObject qrObject = Instantiate(QRPrefab, qrImage.transform.position, qrImage.transform.rotation, qrImage.transform);
@@ -61,14 +59,12 @@ public class QRCodeTracker : MonoBehaviour
         }
         else
         {
-            // Update existing object's transform
             GameObject qrObject = trackedQRObjects[qrImage.Text];
             qrObject.transform.position = qrImage.transform.position;
             qrObject.transform.rotation = qrImage.transform.rotation;
             qrObject.transform.SetParent(qrImage.transform, true);
         }
 
-        // Update tracking time
         lastTrackingTimes[qrImage.Text] = Time.time;
     }
 
@@ -76,21 +72,18 @@ public class QRCodeTracker : MonoBehaviour
     {
         Debug.Log($"QR code count: {eventArgs.Added.Count} {eventArgs.Updated.Count} {eventArgs.Removed.Count}");
 
-        // Handle new QR codes
         foreach (var addedQR in eventArgs.Added)
         {
             Debug.Log($"Marker detected: {addedQR.Text}");
             CreateOrUpdateQRObject(addedQR);
         }
 
-        // Handle updated QR codes
         foreach (var updatedQR in eventArgs.Updated)
         {
             Debug.Log($"Marker updated: {updatedQR.Text}");
             CreateOrUpdateQRObject(updatedQR);
         }
 
-        // Handle explicitly removed QR codes
         foreach (var removedQR in eventArgs.Removed)
         {
             RemoveQRCode(removedQR.Text);
@@ -103,7 +96,6 @@ public class QRCodeTracker : MonoBehaviour
         {
             qrTracker.OnTrackedQRImagesChanged -= QRTracker_OnTrackedQRImagesChanged;
 
-            // Clean up all tracked QR codes
             foreach (var codeId in new List<string>(trackedQRObjects.Keys))
             {
                 RemoveQRCode(codeId);
