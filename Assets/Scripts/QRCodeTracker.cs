@@ -5,11 +5,13 @@ using System.Collections.Generic;
 public class QRCodeTracker : MonoBehaviour
 {
     [SerializeField] private GameObject QRPrefab;
+    [SerializeField] private GameObject AvatarPrefab; // Add reference to the avatar prefab
     [SerializeField] private float trackingTimeout = 0.5f;
 
     private ARFoundationQRTracker qrTracker;
     private Dictionary<string, GameObject> trackedQRObjects = new Dictionary<string, GameObject>();
     private Dictionary<string, float> lastTrackingTimes = new Dictionary<string, float>();
+    private HashSet<string> spawnedAvatars = new HashSet<string>(); // Track which QR codes have already spawned avatars
 
     private void Awake()
     {
@@ -30,7 +32,6 @@ public class QRCodeTracker : MonoBehaviour
             }
         }
 
-        // Remove lost QR codes and clean up tracking
         foreach (var codeId in codestoRemove)
         {
             RemoveQRCode(codeId);
@@ -48,6 +49,7 @@ public class QRCodeTracker : MonoBehaviour
         }
 
         lastTrackingTimes.Remove(codeId);
+        // Note: We don't remove from spawnedAvatars because we want to remember which codes have spawned avatars
     }
 
     private void CreateOrUpdateQRObject(ARTrackedQRImage qrImage)
@@ -56,6 +58,13 @@ public class QRCodeTracker : MonoBehaviour
         {
             GameObject qrObject = Instantiate(QRPrefab, qrImage.transform.position, qrImage.transform.rotation, qrImage.transform);
             trackedQRObjects[qrImage.Text] = qrObject;
+
+            // Check if this is the 'Avatar' QR code and hasn't spawned an avatar yet
+            if (qrImage.Text == "Avatar" && !spawnedAvatars.Contains(qrImage.Text))
+            {
+                SpawnAvatar();
+                spawnedAvatars.Add(qrImage.Text); // Mark this QR code as having spawned an avatar
+            }
         }
         else
         {
@@ -66,6 +75,28 @@ public class QRCodeTracker : MonoBehaviour
         }
 
         lastTrackingTimes[qrImage.Text] = Time.time;
+    }
+
+    private void SpawnAvatar()
+    {
+        // Get the camera's position (user's position)
+        Camera mainCamera = Camera.main;
+        if (mainCamera != null)
+        {
+            // Calculate position 1 meter to the right of the user
+            Vector3 userPosition = mainCamera.transform.position;
+            Vector3 rightDirection = mainCamera.transform.right;
+
+            // Calculate spawn position (1 meter to the right, same height as user)
+            Vector3 spawnPosition = userPosition + rightDirection * -2f;
+            spawnPosition.y -= 1.7f;
+
+            // Create the avatar at the calculated position
+            GameObject avatar = Instantiate(AvatarPrefab, spawnPosition, Quaternion.identity);
+
+            // Make the avatar look at the user
+            avatar.transform.LookAt(new Vector3(userPosition.x, avatar.transform.position.y, userPosition.z));
+        }
     }
 
     private void QRTracker_OnTrackedQRImagesChanged(ARTrackedQRImagesChangedEventArgs eventArgs)
