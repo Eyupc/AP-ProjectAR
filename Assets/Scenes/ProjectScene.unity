@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedLibrary: {fileID: 0}
-  m_MaxNumberOfMovingImages: 1
+  m_MaxNumberOfMovingImages: 4
   m_TrackedImagePrefab: {fileID: 0}
 --- !u!114 &163789288
 MonoBehaviour:
@@ -398,6 +398,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QRPrefab: {fileID: 3428201932709905906, guid: 9b03372dee2c15f4184a211a02cebdf7,
     type: 3}
+  AvatarPrefab: {fileID: 9188278811865288090, guid: 6cb800609aa4c432585cbb10f253851d,
+    type: 3}
+  trackingTimeout: 0.1
 --- !u!1 &1875395765
 GameObject:
   m_ObjectHideFlags: 0
