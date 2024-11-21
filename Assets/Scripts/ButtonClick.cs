@@ -6,23 +6,26 @@ public class ButtonClick : MonoBehaviour
 {
     public GameObject homeCanvas;
     public GameObject cameraCanvas;
+    public GameObject buttonCanvas;
 
     public void ShowUI(string target)
     {
         homeCanvas.SetActive(false);
         cameraCanvas.SetActive(false);
+        Debug.Log("A button was clicked.");
+        Debug.Log(target);
 
         switch (target)
         {
             case "Home":
                 homeCanvas.SetActive(true);
-                cameraCanvas.SetActive(false);
+                //cameraCanvas.SetActive(false);
                 Debug.Log("Home canvas is now visible.");
                 break;
 
             case "Camera":
                 cameraCanvas.SetActive(true);
-                homeCanvas.SetActive(false);
+                //homeCanvas.SetActive(false);
                 Debug.Log("Camera canvas is now visible.");
                 break;
 
