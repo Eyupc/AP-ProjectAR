@@ -80,6 +80,7 @@ public class QRCodeTracker : MonoBehaviour
     private void SpawnAvatar()
     {
         // Get the camera's position (user's position)
+        Debug.Log("Spawning avatar");
         Camera mainCamera = Camera.main;
         if (mainCamera != null)
         {
