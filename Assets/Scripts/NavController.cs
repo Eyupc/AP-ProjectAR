@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NavbarClick : MonoBehaviour
+public class NavController : MonoBehaviour
 {
     public GameObject homeCanvas;
-    public GameObject cameraCanvas;
-    public GameObject buttonCanvas;
+    public GameObject mapCanvas;
 
     public void ShowUI(string target)
     {
         homeCanvas.SetActive(false);
-        cameraCanvas.SetActive(false);
-        Debug.Log("A button was clicked.");
-        Debug.Log(target);
+        mapCanvas.SetActive(false);
 
         switch (target)
         {
@@ -23,10 +20,9 @@ public class NavbarClick : MonoBehaviour
                 Debug.Log("Home canvas is now visible.");
                 break;
 
-            case "Camera":
-                cameraCanvas.SetActive(true);
-                //homeCanvas.SetActive(false);
-                Debug.Log("Camera canvas is now visible.");
+            case "Map":
+                mapCanvas.SetActive(true);
+                Debug.Log(" Map is now visible.");
                 break;
 
             default:
