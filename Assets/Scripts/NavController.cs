@@ -10,23 +10,23 @@ public class NavController : MonoBehaviour
     public void ShowUI(string target)
     {
         homeCanvas.SetActive(false);
+        if (mapCanvas.GetComponent<WebViewObject>() != null)
+            mapCanvas.GetComponent<WebViewObject>().SetVisibility(false);
         mapCanvas.SetActive(false);
 
         switch (target)
         {
             case "Home":
                 homeCanvas.SetActive(true);
-                //cameraCanvas.SetActive(false);
                 Debug.Log("Home canvas is now visible.");
                 break;
 
             case "Map":
                 mapCanvas.SetActive(true);
+                mapCanvas.GetComponent<WebViewObject>().SetVisibility(true);
                 Debug.Log(" Map is now visible.");
                 break;
-
             default:
-                Debug.LogWarning("Invalid target: " + target);
                 break;
         }
     }
