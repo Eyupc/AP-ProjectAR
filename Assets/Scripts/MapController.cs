@@ -1,90 +1,129 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System.Collections;
 
-public class MapController : MonoBehaviour
+public class GoogleMapsController : MonoBehaviour
 {
-    [Header("Map Settings")]
-    public Vector2 centerLocation = new Vector2(51.25f, 4.4f); // Center of Antwerp
-    public int zoom = 16;
+    [Header("Google Maps Settings")]
+    [SerializeField] private string apiKey = "AIzaSyDWohoPxq2AfGFoUgw91hbaS8g-";
+    [SerializeField] private int zoomLevel = 12;
+    [SerializeField] private double latitude = 40.7128; // Default latitude (New York)
+    [SerializeField] private double longitude = -74.0060; // Default longitude (New York)
+    [SerializeField] private RawImage mapDisplay;
 
-    [Header("UI References")]
-    public RectTransform mapContainer;
-    public ScrollRect scrollRect;
-    public Button zoomInButton;
-    public Button zoomOutButton;
-    public Text attributionText;
+    private const string GOOGLE_MAPS_URL = "https://maps.googleapis.com/maps/api/staticmap";
+    private Vector2 lastTouchPosition;
+    private bool isDragging = false;
+    private float zoomMin = 1;
+    private float zoomMax = 20;
 
-    private Dictionary<string, Texture2D> tileCache = new Dictionary<string, Texture2D>();
-    private string[] TILE_SERVERS = new string[]
-    {
-        "https://a.tile.openstreetmap.org/{0}/{1}/{2}.png",
-        "https://b.tile.openstreetmap.org/{0}/{1}/{2}.png",
-        "https://c.tile.openstreetmap.org/{0}/{1}/{2}.png"
-    };
-
-    private int currentServer = 0;
+    private Vector2 mapSize = new Vector2(640, 640); // Size of the map in pixels
 
     void Start()
     {
-        LoadMapTile();
+        StartCoroutine(LoadMap());
     }
 
-    void LoadMapTile()
+    private IEnumerator LoadMap()
     {
-        StartCoroutine(DownloadMapTile());
-    }
-
-    IEnumerator DownloadMapTile()
-    {
-        int x = LongitudeToTileX(centerLocation.y, zoom);
-        int y = LatitudeToTileY(centerLocation.x, zoom);
-
-        string url = string.Format(TILE_SERVERS[currentServer], zoom, x, y);
-        currentServer = (currentServer + 1) % TILE_SERVERS.Length;
-
+        Debug.Log("TEST");
+        string url = $"{GOOGLE_MAPS_URL}?center={latitude},{longitude}&zoom={zoomLevel}&size={(int)mapSize.x}x{(int)mapSize.y}&scale=1&key={apiKey}";
         using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(url))
         {
             yield return www.SendWebRequest();
 
             if (www.result == UnityWebRequest.Result.Success)
             {
-                Texture2D texture = DownloadHandlerTexture.GetContent(www);
-                tileCache[url] = texture;
-
-                // Convert Texture2D to Sprite and apply to the map container Image
-                Sprite mapSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-
-                // Apply the sprite to the map container's Image component
-                mapContainer.GetComponent<Image>().sprite = mapSprite;
+                Texture2D mapTexture = DownloadHandlerTexture.GetContent(www);
+                mapDisplay.texture = mapTexture;
+                mapDisplay.color = Color.white; // Ensure map is visible.
             }
             else
             {
-                Debug.LogError($"Failed to load map tile: {www.error}");
+                Debug.LogError($"Failed to load map: {www.error}");
             }
         }
     }
 
-    public void UpdateZoom(int delta)
+    void Update()
     {
-        int newZoom = Mathf.Clamp(zoom + delta, 1, 19);
-        if (newZoom != zoom)
+        HandleTouchInput();
+    }
+
+    private void HandleTouchInput()
+    {
+        if (Input.touchCount == 1)
         {
-            zoom = newZoom;
-            LoadMapTile();
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    isDragging = true;
+                    lastTouchPosition = touch.position;
+                    break;
+
+                case TouchPhase.Moved:
+                    if (isDragging)
+                    {
+                        Vector2 touchDelta = touch.position - lastTouchPosition;
+                        PanMap(touchDelta);
+                        lastTouchPosition = touch.position;
+                    }
+                    break;
+
+                case TouchPhase.Ended:
+                    isDragging = false;
+                    break;
+            }
+        }
+        else if (Input.touchCount == 2)
+        {
+            HandlePinchZoom();
         }
     }
 
-    int LongitudeToTileX(float longitude, int zoom)
+    private void PanMap(Vector2 delta)
     {
-        return (int)((longitude + 180.0) / 360.0 * (1 << zoom));
+        // Convert pixel delta to degrees
+        double degreesPerPixelLat = 180.0 / (256 * Mathf.Pow(2, zoomLevel));
+        double degreesPerPixelLon = 360.0 / (256 * Mathf.Pow(2, zoomLevel));
+
+        latitude = Mathf.Clamp((float)(latitude - delta.y * degreesPerPixelLat), -85f, 85f); // Prevent panning beyond poles
+        longitude = Mathf.Repeat((float)(longitude + delta.x * degreesPerPixelLon), 360f);  // Wrap around the globe
+
+        StartCoroutine(LoadMap());
     }
 
-    int LatitudeToTileY(float latitude, int zoom)
+    private void HandlePinchZoom()
     {
-        float latRad = latitude * Mathf.PI / 180.0f;
-        return (int)((1.0 - Mathf.Log(Mathf.Tan(latRad) + 1.0f / Mathf.Cos(latRad)) / Mathf.PI) / 2.0 * (1 << zoom));
+        Touch touch0 = Input.GetTouch(0);
+        Touch touch1 = Input.GetTouch(1);
+
+        Vector2 touch0PrevPos = touch0.position - touch0.deltaPosition;
+        Vector2 touch1PrevPos = touch1.position - touch1.deltaPosition;
+
+        float prevMagnitude = (touch0PrevPos - touch1PrevPos).magnitude;
+        float currentMagnitude = (touch0.position - touch1.position).magnitude;
+
+        float difference = currentMagnitude - prevMagnitude;
+
+        if (Mathf.Abs(difference) > 10f) // Only react to significant changes
+        {
+            int previousZoom = zoomLevel;
+            zoomLevel = Mathf.Clamp(zoomLevel + (difference > 0 ? 1 : -1), (int)zoomMin, (int)zoomMax);
+
+            // Recalculate map center to ensure smooth zooming
+            Vector2 centerScreenPoint = (touch0.position + touch1.position) / 2f;
+            Vector2 screenSize = new Vector2(Screen.width, Screen.height);
+
+            double centerLatOffset = ((centerScreenPoint.y / screenSize.y) - 0.5) * 180.0 / Mathf.Pow(2, zoomLevel);
+            double centerLonOffset = ((centerScreenPoint.x / screenSize.x) - 0.5) * 360.0 / Mathf.Pow(2, zoomLevel);
+
+            latitude = Mathf.Clamp((float)(latitude + centerLatOffset), -85f, 85f);
+            longitude = Mathf.Repeat((float)(longitude + centerLonOffset), 360f);
+
+            StartCoroutine(LoadMap());
+        }
     }
 }
