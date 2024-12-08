@@ -49,18 +49,22 @@ public class QRCodeTracker : MonoBehaviour
         }
 
         lastTrackingTimes.Remove(codeId);
-        // Note: We don't remove from executedActions to prevent re-execution of one-time actions
     }
 
     private void CreateOrUpdateQRObject(ARTrackedQRImage qrImage)
     {
+        if (UserSystemManager.IsStopCompleted(qrImage.Text))
+        {
+            Debug.Log($"Stop {qrImage.Text} is already completed. Not spawning QR object.");
+            return;
+        }
+
         if (!trackedQRObjects.ContainsKey(qrImage.Text))
         {
             GameObject qrObject = Instantiate(QRPrefab, qrImage.transform.position,
                 qrImage.transform.rotation, qrImage.transform);
             trackedQRObjects[qrImage.Text] = qrObject;
 
-            // Execute QR action if not already executed
             if (!executedActions.Contains(qrImage.Text) &&
                 actionRegistry.TryGetAction(qrImage.Text, out QRActionBase action))
             {
