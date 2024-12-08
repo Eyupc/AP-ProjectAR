@@ -53,9 +53,6 @@ public class WebviewHandler : MonoBehaviour
         webViewObject.SetCameraAccess(true);
 
 
-#if UNITY_ANDROID
-        webViewObject.SetHardwareAcceleration(true);
-#endif
 
         string url = "https://ar.eyupc.dev";
         Debug.Log($"Attempting to load URL: {url}");
