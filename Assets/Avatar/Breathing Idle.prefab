@@ -147,11 +147,14 @@ MonoBehaviour:
   subtitlePosition: {fileID: 0}
   textHeight: 2
   subtitles:
-  - text: 'Ik ben van daar, ik ben van hier '
+  - text: Hij zegt ...
     startTime: 0
-    endTime: 3
+    endTime: 2
+  - text: 'Ik ben van daar, ik ben van hier '
+    startTime: 2
+    endTime: 4
   - text: 'En ik ben niet daar, en niet hier '
-    startTime: 3
+    startTime: 5
     endTime: 7
   - text: 'Ik heb twee namen die samenkomen en uit elkaar gaan '
     startTime: 7
@@ -161,7 +164,99 @@ MonoBehaviour:
     endTime: 13
   - text: 'Ik ben vergeten in welke ik ooit droomde. '
     startTime: 13
-    endTime: 16
+    endTime: 15
+  - text: Ik heb een gescreven taal, een Engelse, waarvan de woorden tot mijn beschikking
+      staan.
+    startTime: 15
+    endTime: 20
+  - text: En een andere, afkomstig uit de hemelse dialoog met Jeruzalem.
+    startTime: 20
+    endTime: 25
+  - text: Met een zilveren accent,
+    startTime: 25
+    endTime: 27
+  - text: Maar het gehoorzaamt niet aan mijn verbeelding.
+    startTime: 27
+    endTime: 30
+  - text: En de  identiteit ? vroeg ik.
+    startTime: 30
+    endTime: 32
+  - text: 'Hij zei: zelfverdediging...'
+    startTime: 32
+    endTime: 35
+  - text: Identiteit is de dochter van geboorte.
+    startTime: 35
+    endTime: 38
+  - text: Maar uiteindelijk is het de creatie.
+    startTime: 38
+    endTime: 40
+  - text: Van haar eigenaar.
+    startTime: 41
+    endTime: 42
+  - text: Niet het erven van een verleden.
+    startTime: 42
+    endTime: 44
+  - text: Ik heb het meervoudige.
+    startTime: 44
+    endTime: 46
+  - text: Binnenin mij huist mijn steeds vernieuwende buitenkant. Maar ik behoor
+      tot de vraag van het slachtoffer.
+    startTime: 46
+    endTime: 53
+  - text: Had ik niet van daar geweest,
+    startTime: 53
+    endTime: 55
+  - text: dan had ik mijn hart getraind
+    startTime: 55
+    endTime: 56
+  - text: om daar de gazelle van de metafoor groot te brengen.
+    startTime: 56
+    endTime: 60
+  - text: Dus, draag je land waar je ook gaat
+    startTime: 60
+    endTime: 63
+  - text: En wees een narcist, als dat nodig is.
+    startTime: 63
+    endTime: 66
+  - text: Ballingschap is de buitenwereld.
+    startTime: 67
+    endTime: 69
+  - text: Ballingschap is de innerlijke wereld.
+    startTime: 69
+    endTime: 72
+  - text: Dus, wie ben jij tussen hen in?
+    startTime: 73
+    endTime: 75
+  - text: Ik definieer mezelf niet, opdat ik het niet verlies.
+    startTime: 75
+    endTime: 78
+  - text: En ik ben wie ik ben.
+    startTime: 79
+    endTime: 80
+  - text: Ik ben mijn andere zelf in een dualiteit die
+    startTime: 80
+    endTime: 84
+  - text: zich vermengt tussen taal en verwijzing.
+    startTime: 84
+    endTime: 87
+  - text: "Had ik po\xEBzie geschreven, zou ik hebben gezegd:"
+    startTime: 87
+    endTime: 90
+  - text: "Ik ben twee in \xE9\xE9n."
+    startTime: 90
+    endTime: 92
+  - text: Zoals de twee vleugels van een zwaluw.
+    startTime: 92
+    endTime: 95
+  - text: Als de lente laat zou komen,
+    startTime: 95
+    endTime: 98
+  - text: Zou ik tevreden zijn
+    startTime: 98
+    endTime: 99
+  - text: om de goede tijding te brengen.
+    startTime: 99
+    endTime: 102
 --- !u!82 &-5248752376949655281
 AudioSource:
   m_ObjectHideFlags: 0
@@ -172,7 +267,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 912b04df32e224cc9a81d093468979c6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 231cc5eceebb1534baf9b6ee0dc35125, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
