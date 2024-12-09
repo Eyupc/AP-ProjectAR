@@ -257,6 +257,7 @@ MonoBehaviour:
   - text: om de goede tijding te brengen.
     startTime: 99
     endTime: 102
+  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
 --- !u!82 &-5248752376949655281
 AudioSource:
   m_ObjectHideFlags: 0
