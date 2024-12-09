@@ -152,25 +152,25 @@ MonoBehaviour:
     endTime: 2
   - text: 'Ik ben van daar, ik ben van hier '
     startTime: 2
-    endTime: 4
+    endTime: 5
   - text: 'En ik ben niet daar, en niet hier '
     startTime: 5
-    endTime: 7
+    endTime: 8
   - text: 'Ik heb twee namen die samenkomen en uit elkaar gaan '
-    startTime: 7
+    startTime: 8
     endTime: 11
   - text: 'Ik heb twee talen '
     startTime: 11
     endTime: 13
   - text: 'Ik ben vergeten in welke ik ooit droomde. '
     startTime: 13
-    endTime: 15
+    endTime: 15.5
   - text: Ik heb een gescreven taal, een Engelse, waarvan de woorden tot mijn beschikking
       staan.
-    startTime: 15
-    endTime: 20
+    startTime: 15.5
+    endTime: 21
   - text: En een andere, afkomstig uit de hemelse dialoog met Jeruzalem.
-    startTime: 20
+    startTime: 21
     endTime: 25
   - text: Met een zilveren accent,
     startTime: 25
@@ -180,9 +180,9 @@ MonoBehaviour:
     endTime: 30
   - text: En de  identiteit ? vroeg ik.
     startTime: 30
-    endTime: 32
+    endTime: 33
   - text: 'Hij zei: zelfverdediging...'
-    startTime: 32
+    startTime: 33
     endTime: 35
   - text: Identiteit is de dochter van geboorte.
     startTime: 35

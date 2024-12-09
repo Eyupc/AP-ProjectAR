@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ARFoundationQRVisualizationSample.unity
     guid: 345ee45186083674592ed67b13839ea6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ProjectScene.unity
     guid: 18fa7b8f9bb9b43e7bc19f6fc09a1495
   - enabled: 0
@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/menuScene.unity
     guid: 693b00a7c150fe7438f429dba510cfdd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stop3.unity
     guid: 8529211be20865f40a6fb719520525be
   m_configObjects:
