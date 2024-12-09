@@ -8,6 +8,7 @@ public class PlayPoem : MonoBehaviour
     [SerializeField] private Transform subtitlePosition; // Empty GameObject above character
     [SerializeField] private float textHeight = 2f; // Height above character
     [SerializeField] private List<SubtitleLine> subtitles = new List<SubtitleLine>(); // List of subtitle timings
+    [SerializeField] private TMP_FontAsset garamondFont; // List of subtitle timings
 
     private TextMeshPro subtitleText;
     private float audioStartTime;
@@ -37,6 +38,7 @@ public class PlayPoem : MonoBehaviour
         subtitleText.alignment = TextAlignmentOptions.Center;
         subtitleText.fontSize = 0.8f;
         subtitleText.color = Color.white;
+        subtitleText.font = garamondFont;
 
         // Enable word wrapping and set maximum width
         RectTransform rectTransform = subtitleText.rectTransform;
