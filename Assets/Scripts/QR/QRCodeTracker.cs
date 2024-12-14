@@ -1,6 +1,7 @@
 using HoloLab.ARFoundationQRTracking;
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class QRCodeTracker : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class QRCodeTracker : MonoBehaviour
     {
         qrTracker = FindObjectOfType<ARFoundationQRTracker>();
         qrTracker.OnTrackedQRImagesChanged += QRTracker_OnTrackedQRImagesChanged;
-    }
 
+    }
     private void Update()
     {
         List<string> codestoRemove = new List<string>();

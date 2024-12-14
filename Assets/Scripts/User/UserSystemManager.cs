@@ -51,6 +51,8 @@ public static class UserSystemManager
             switch (stop.stopId)
             {
                 case "Poem":
+                    var obj = GameObject.FindWithTag("Stop1_Player");
+                    if (obj != null) GameObject.Destroy(obj);
                     break;
                 case "Restaurant":
                     break;

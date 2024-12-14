@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HomeScreen.unity
     guid: ded0e019552935c4f9c92096beae02a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/menuScene.unity
     guid: 693b00a7c150fe7438f429dba510cfdd
   m_configObjects:
