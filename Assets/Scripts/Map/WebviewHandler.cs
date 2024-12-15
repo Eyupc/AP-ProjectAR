@@ -15,14 +15,11 @@ public class WebviewHandler : MonoBehaviour
                 if (msg == "LOAD_FINISHED")
                 {
                     Debug.Log("WebView has successfully loaded the URL.");
-                    // Inject JavaScript to check map status
                     webViewObject.EvaluateJS(@"
                         console.log('Unity WebView loaded, checking Google Maps...');
                         
-                        // Listen for JavaScript errors
                         window.onerror = function(message, source, lineno, colno, error) {
                             console.error('JavaScript Error:', message, source, lineno, colno, error);
-                            // Send the error message to Unity for logging
                             unityCallback('JavaScript Error: ' + message + ' at ' + source + ':' + lineno + ':' + colno);
                         };
 
@@ -30,7 +27,6 @@ public class WebviewHandler : MonoBehaviour
                             console.error('Google Maps API not loaded');
                         } else {
                             console.log('Google Maps API is available');
-                            // Force map refresh
                             if (typeof google.maps !== 'undefined' && map) {
                                 google.maps.event.trigger(map, 'resize');
                             }

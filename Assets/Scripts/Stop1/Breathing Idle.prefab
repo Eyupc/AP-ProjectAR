@@ -78,6 +78,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breathing Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop1_Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3708412383749799733, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -8,8 +8,8 @@ public class GoogleMapsController : MonoBehaviour
     [Header("Google Maps Settings")]
     [SerializeField] private string apiKey = "AIzaSyDWohoPxq2AfGFoUgw91hbaS8g-";
     [SerializeField] private int zoomLevel = 12;
-    [SerializeField] private double latitude = 40.7128; // Default latitude (New York)
-    [SerializeField] private double longitude = -74.0060; // Default longitude (New York)
+    [SerializeField] private double latitude = 40.7128;
+    [SerializeField] private double longitude = -74.0060;
     [SerializeField] private RawImage mapDisplay;
 
     private const string GOOGLE_MAPS_URL = "https://maps.googleapis.com/maps/api/staticmap";
@@ -18,7 +18,7 @@ public class GoogleMapsController : MonoBehaviour
     private float zoomMin = 1;
     private float zoomMax = 20;
 
-    private Vector2 mapSize = new Vector2(640, 640); // Size of the map in pixels
+    private Vector2 mapSize = new Vector2(640, 640);
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class GoogleMapsController : MonoBehaviour
             {
                 Texture2D mapTexture = DownloadHandlerTexture.GetContent(www);
                 mapDisplay.texture = mapTexture;
-                mapDisplay.color = Color.white; // Ensure map is visible.
+                mapDisplay.color = Color.white;
             }
             else
             {
@@ -85,12 +85,11 @@ public class GoogleMapsController : MonoBehaviour
 
     private void PanMap(Vector2 delta)
     {
-        // Convert pixel delta to degrees
         double degreesPerPixelLat = 180.0 / (256 * Mathf.Pow(2, zoomLevel));
         double degreesPerPixelLon = 360.0 / (256 * Mathf.Pow(2, zoomLevel));
 
-        latitude = Mathf.Clamp((float)(latitude - delta.y * degreesPerPixelLat), -85f, 85f); // Prevent panning beyond poles
-        longitude = Mathf.Repeat((float)(longitude + delta.x * degreesPerPixelLon), 360f);  // Wrap around the globe
+        latitude = Mathf.Clamp((float)(latitude - delta.y * degreesPerPixelLat), -85f, 85f);
+        longitude = Mathf.Repeat((float)(longitude + delta.x * degreesPerPixelLon), 360f);
 
         StartCoroutine(LoadMap());
     }
@@ -108,12 +107,11 @@ public class GoogleMapsController : MonoBehaviour
 
         float difference = currentMagnitude - prevMagnitude;
 
-        if (Mathf.Abs(difference) > 10f) // Only react to significant changes
+        if (Mathf.Abs(difference) > 10f)
         {
             int previousZoom = zoomLevel;
             zoomLevel = Mathf.Clamp(zoomLevel + (difference > 0 ? 1 : -1), (int)zoomMin, (int)zoomMax);
 
-            // Recalculate map center to ensure smooth zooming
             Vector2 centerScreenPoint = (touch0.position + touch1.position) / 2f;
             Vector2 screenSize = new Vector2(Screen.width, Screen.height);
 
