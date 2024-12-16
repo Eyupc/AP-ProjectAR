@@ -4,23 +4,28 @@ using UnityEngine.XR.ARSubsystems;
 using System.Collections.Generic;
 using HoloLab.ARFoundationQRTracking;
 using System;
+using UnityEditor;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using System.Runtime.CompilerServices;
 
 public class MenuActions : MonoBehaviour
 {
     public GameObject menuCanvas;
     public GameObject kebabPrefab;
+    public GameObject shakriyehPrefab;
+    [SerializeField] private GameObject questionMarkPrefab;
+    private static GameObject questionMark;
     [SerializeField] private XRReferenceImageLibrary library;
-    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
+    private static Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
     private ARTrackedImageManager arTrackedImageManager;
 
-    private static bool isKebabOrdered = false;
+    private static MenuItem selectedItem = MenuItem.None;
 
     private void Start()
     {
         TrackingManager trackingManager = FindObjectOfType<TrackingManager>();
         trackingManager.EnableImageTracking();
         arTrackedImageManager = FindObjectOfType<ARTrackedImageManager>();
-
         if (arTrackedImageManager == null)
         {
             Debug.LogError("No ARTrackedImageManager found in the scene!");
@@ -57,14 +62,30 @@ public class MenuActions : MonoBehaviour
 
     public void OrderKebab()
     {
-        Debug.Log("Kebab ordered - Please scan the marker to place your order");
-        isKebabOrdered = true;
+        selectedItem = MenuItem.Kebab;
+        UpdateAllSpawnedObjects();
+
+    }
+    public void OrderShakriyeh()
+    {
+        selectedItem = MenuItem.Shakriyeh;
+        UpdateAllSpawnedObjects();
+
     }
 
-    // Make this method public so TrackingManager can use it
+    private void UpdateAllSpawnedObjects()
+    {
+
+        foreach (var prefab in spawnedPrefabs.Values)
+        {
+            Destroy(prefab);
+        }
+        Destroy(questionMark);
+        spawnedPrefabs.Clear();
+    }
+
     public void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        Debug.Log("AAA- OnTrackedImagesChanged called");
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
             UpdateSpawnedObject(trackedImage);
@@ -72,11 +93,28 @@ public class MenuActions : MonoBehaviour
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-            if (spawnedPrefabs.ContainsKey(trackedImage.referenceImage.name))
+            string imageName = trackedImage.referenceImage.name;
+            if (spawnedPrefabs.ContainsKey(imageName))
             {
-                GameObject spawnedObject = spawnedPrefabs[trackedImage.referenceImage.name];
+                GameObject spawnedObject = spawnedPrefabs[imageName];
                 spawnedObject.transform.position = trackedImage.transform.position;
                 spawnedObject.transform.rotation = trackedImage.transform.rotation;
+
+                Vector3 dishTopCenter = spawnedObject.transform.position;
+                Renderer objectRenderer = spawnedObject.GetComponent<Renderer>();
+                if (objectRenderer != null)
+                {
+                    dishTopCenter += Vector3.up * objectRenderer.bounds.extents.y; // Add half the height to reach the top
+                }
+                else
+                {
+                    dishTopCenter += Vector3.up * 0.5f; // Fallback if no renderer is available
+                }
+
+                questionMark.transform.position = dishTopCenter;
+                questionMark.transform.rotation = spawnedObject.transform.rotation;
+
+
             }
             else
             {
@@ -86,34 +124,77 @@ public class MenuActions : MonoBehaviour
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed)
         {
-            if (spawnedPrefabs.ContainsKey(trackedImage.referenceImage.name))
+            string imageName = trackedImage.referenceImage.name;
+            if (spawnedPrefabs.ContainsKey(imageName))
             {
-                Destroy(spawnedPrefabs[trackedImage.referenceImage.name]);
-                spawnedPrefabs.Remove(trackedImage.referenceImage.name);
+                Destroy(spawnedPrefabs[imageName]);
+                spawnedPrefabs.Remove(imageName);
             }
         }
     }
-
     private void UpdateSpawnedObject(ARTrackedImage trackedImage)
     {
-        string markerName = trackedImage.referenceImage.name;
+        string imageName = trackedImage.referenceImage.name;
 
-        Debug.Log(markerName + isKebabOrdered);
-        if (markerName == "kebabMarker" && isKebabOrdered)
+        // Remove any previously spawned object for this image
+        if (spawnedPrefabs.ContainsKey(imageName))
         {
-            if (spawnedPrefabs.ContainsKey(markerName))
-            {
-                Destroy(spawnedPrefabs[markerName]);
-                spawnedPrefabs.Remove(markerName);
-            }
+            Destroy(spawnedPrefabs[imageName]);
+            spawnedPrefabs.Remove(imageName);
+        }
 
-            GameObject spawnedObject = Instantiate(kebabPrefab,
+        GameObject prefabToSpawn = GetPrefabForMenuItem(selectedItem);
+
+        if (prefabToSpawn != null)
+        {
+            // Instantiate the dish prefab
+            GameObject spawnedObject = Instantiate(prefabToSpawn,
                 trackedImage.transform.position,
                 trackedImage.transform.rotation);
+            spawnedObject.transform.localScale = new Vector3(6f, 6f, 6f);
+            spawnedPrefabs[imageName] = spawnedObject;
 
-            spawnedPrefabs[markerName] = spawnedObject;
-            isKebabOrdered = false;
-            Debug.Log("Kebab has been placed!");
+            // Calculate position for question mark
+            Vector3 dishTopCenter = spawnedObject.transform.position;
+            Renderer objectRenderer = spawnedObject.GetComponent<Renderer>();
+            if (objectRenderer != null)
+            {
+                dishTopCenter += Vector3.up * objectRenderer.bounds.extents.y; // Add half the height to reach the top
+            }
+            else
+            {
+                dishTopCenter += Vector3.up * 0.5f; // Fallback if no renderer is available
+            }
+
+            // Spawn the question mark
+            if (questionMarkPrefab != null)
+            {
+                questionMark = Instantiate(
+                    questionMarkPrefab,
+                    dishTopCenter,
+                    spawnedObject.transform.rotation
+                );
+                questionMark.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+            }
+
+            Debug.Log($"Spawned {selectedItem} at marker with question mark on top.");
         }
+    }
+
+    private GameObject GetPrefabForMenuItem(MenuItem item)
+    {
+        return item switch
+        {
+            MenuItem.Kebab => kebabPrefab,
+            MenuItem.Shakriyeh => shakriyehPrefab,
+            _ => null
+        };
+    }
+
+    public enum MenuItem
+    {
+        None,
+        Kebab,
+        Shakriyeh
     }
 }
