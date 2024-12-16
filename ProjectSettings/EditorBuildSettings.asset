@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/menuScene.unity
     guid: 693b00a7c150fe7438f429dba510cfdd
+  - enabled: 0
+    path: Assets/Scenes/ArMarker.unity
+    guid: 16ca1a6e124ba4d4987f104414691574
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
