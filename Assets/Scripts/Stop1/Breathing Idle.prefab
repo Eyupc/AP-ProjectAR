@@ -103,6 +103,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 5937174377829708154}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: -5248752376949655281}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
@@ -262,6 +266,131 @@ MonoBehaviour:
   - text: om de goede tijding te brengen.
     startTime: 99
     endTime: 102
+  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
+--- !u!114 &5937174377829708154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3561998431760403027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1777f4216bb52c44ca1ecd6a9e0a7a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: -5248752376949655281}
+  subtitlePosition: {fileID: 0}
+  textHeight: 2
+  subtitles:
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
+  - text: 
+    startTime: 0
+    endTime: 0
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
 --- !u!82 &-5248752376949655281
 AudioSource:
