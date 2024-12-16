@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Stop1_Player
+  - MenuItemCanvas
+  - MenuCanvas
   layers:
   - Default
   - TransparentFX
