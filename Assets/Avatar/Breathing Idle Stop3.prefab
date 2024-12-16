@@ -146,32 +146,24 @@ MonoBehaviour:
   audioSource: {fileID: -5248752376949655281}
   subtitlePosition: {fileID: 0}
   textHeight: 2
+  textWidth: 2
   subtitles:
-  - text: De skyline van Aleppo was altijd mijn trots.
+  - text: oh,de beroemde zeep van Aleppo.
     startTime: 0
-    endTime: 2
-  - text: De stad heeft een rijke geschiedenis die duizenden jaren teruggaat.
-    startTime: 2
-    endTime: 4
-  - text: Wist je dat Aleppo ooit de oudste en drukste handelsstad van het Midden-Oosten
-      was,
-    startTime: 5
-    endTime: 7
-  - text: beroemd om haar bruisende souks waar zijde en specerijen werden verhandeld?
-    startTime: 7
-    endTime: 11
-  - text: Ook de Citadel van Aleppo,
-    startTime: 11
-    endTime: 13
-  - text: een van de oudste en best bewaarde ter wereld,
-    startTime: 13
-    endTime: 15
-  - text: is een iconisch symbool van de stad.
-    startTime: 15
-    endTime: 20
-  - text: Het is een plek van kracht en cultuur die ik altijd in mijn hart zal dragen.
-    startTime: 20
-    endTime: 25
+    endTime: 3
+  - text: Deze werd in mijn thuisland al duizenden jaren met de hand gemaakt, van
+      pure olijfolie en laurierolie.
+    startTime: 3
+    endTime: 9
+  - text: Het is een traditie die door families werd doorgegeven, een product vol
+      zorg en ambacht.
+    startTime: 9
+    endTime: 14
+  - text: Mijn vrouw verkocht deze zeep in haar winkel, en het bracht niet alleen
+      reinheid, maar ook een stukje van onze cultuur naar mensen over de hele wereld.
+    startTime: 14
+    endTime: 22
+  garamondFont: {fileID: 0}
 --- !u!82 &-5248752376949655281
 AudioSource:
   m_ObjectHideFlags: 0
@@ -182,7 +174,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 231cc5eceebb1534baf9b6ee0dc35125, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fa9acb8ddafc187409fc994b86fc598f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

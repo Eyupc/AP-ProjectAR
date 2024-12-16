@@ -6,7 +6,8 @@ public class PlayPoem : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Transform subtitlePosition; // Empty GameObject above character
-    [SerializeField] private float textHeight = 2f; // Height above character
+    [SerializeField] private float textHeight = 200f; // Height above character
+    [SerializeField] private float textWidth = 2f;
     [SerializeField] private List<SubtitleLine> subtitles = new List<SubtitleLine>(); // List of subtitle timings
     [SerializeField] private TMP_FontAsset garamondFont; // List of subtitle timings
 
@@ -30,7 +31,10 @@ public class PlayPoem : MonoBehaviour
 
         // Position it above the character
         textObj.transform.localPosition = Vector3.up * textHeight;
+      // textObj.transform.position = subtitlePosition.position + Vector3.up * textHeight;
+        //Vector3 calculatedPosition = subtitlePosition.position + Vector3.up * textHeight;
 
+        //textObj.transform.position = calculatedPosition;
         // Add TextMeshPro component
         subtitleText = textObj.AddComponent<TextMeshPro>();
 
@@ -42,9 +46,10 @@ public class PlayPoem : MonoBehaviour
 
         // Enable word wrapping and set maximum width
         RectTransform rectTransform = subtitleText.rectTransform;
-        rectTransform.sizeDelta = new Vector2(5f, 3f); // Adjust width and height as needed
+        rectTransform.sizeDelta = new Vector2(1f, 2f); // Adjust width and height as needed
         subtitleText.enableWordWrapping = true;
-        subtitleText.overflowMode = TextOverflowModes.Ellipsis; // Add ellipsis (...) if text is truncated
+        subtitleText.overflowMode = TextOverflowModes.Overflow;
+        //subtitleText.overflowMode = TextOverflowModes.Ellipsis; // Add ellipsis (...) if text is truncated
 
         // Make text face camera
         subtitleText.gameObject.AddComponent<FaceCamera>();
