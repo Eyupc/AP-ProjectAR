@@ -13,6 +13,9 @@ public class MenuActions : MonoBehaviour
     public GameObject menuCanvas;
     public GameObject kebabPrefab;
     public GameObject shakriyehPrefab;
+    public GameObject fattoushPrefab;
+    public GameObject kibbehPrefab;
+
     [SerializeField] private GameObject questionMarkPrefab;
     private static GameObject questionMark;
     [SerializeField] private XRReferenceImageLibrary library;
@@ -64,18 +67,28 @@ public class MenuActions : MonoBehaviour
     {
         selectedItem = MenuItem.Kebab;
         UpdateAllSpawnedObjects();
-
     }
+
     public void OrderShakriyeh()
     {
         selectedItem = MenuItem.Shakriyeh;
         UpdateAllSpawnedObjects();
+    }
 
+    public void OrcderKibbeh()
+    {
+        selectedItem = MenuItem.Kibbeh;
+        UpdateAllSpawnedObjects();
+    }
+
+    public void OrderFattoush()
+    {
+        selectedItem = MenuItem.Fattoush;
+        UpdateAllSpawnedObjects();
     }
 
     private void UpdateAllSpawnedObjects()
     {
-
         foreach (var prefab in spawnedPrefabs.Values)
         {
             Destroy(prefab);
@@ -99,22 +112,24 @@ public class MenuActions : MonoBehaviour
                 GameObject spawnedObject = spawnedPrefabs[imageName];
                 spawnedObject.transform.position = trackedImage.transform.position;
                 spawnedObject.transform.rotation = trackedImage.transform.rotation;
+                if (selectedItem == MenuItem.Fattoush)
+                {
+                    spawnedObject.transform.Rotate(-90f, 0f, 0f);
+                }
 
                 Vector3 dishTopCenter = spawnedObject.transform.position;
                 Renderer objectRenderer = spawnedObject.GetComponent<Renderer>();
                 if (objectRenderer != null)
                 {
-                    dishTopCenter += Vector3.up * objectRenderer.bounds.extents.y; // Add half the height to reach the top
+                    dishTopCenter += Vector3.up * objectRenderer.bounds.extents.y * 2f;
                 }
                 else
                 {
-                    dishTopCenter += Vector3.up * 0.5f; // Fallback if no renderer is available
+                    dishTopCenter += Vector3.up * 2f;
                 }
 
                 questionMark.transform.position = dishTopCenter;
-                questionMark.transform.rotation = spawnedObject.transform.rotation;
-
-
+                questionMark.transform.rotation = trackedImage.transform.rotation;
             }
             else
             {
@@ -132,11 +147,11 @@ public class MenuActions : MonoBehaviour
             }
         }
     }
+
     private void UpdateSpawnedObject(ARTrackedImage trackedImage)
     {
         string imageName = trackedImage.referenceImage.name;
 
-        // Remove any previously spawned object for this image
         if (spawnedPrefabs.ContainsKey(imageName))
         {
             Destroy(spawnedPrefabs[imageName]);
@@ -147,34 +162,36 @@ public class MenuActions : MonoBehaviour
 
         if (prefabToSpawn != null)
         {
-            // Instantiate the dish prefab
             GameObject spawnedObject = Instantiate(prefabToSpawn,
                 trackedImage.transform.position,
                 trackedImage.transform.rotation);
-            spawnedObject.transform.localScale = new Vector3(6f, 6f, 6f);
+            spawnedObject.transform.localScale = new Vector3(8f, 8f, 8f);
+            if (selectedItem == MenuItem.Fattoush)
+            {
+                spawnedObject.transform.Rotate(-90f, 0f, 0f);
+                spawnedObject.transform.localScale *= 1.54f;
+            }
             spawnedPrefabs[imageName] = spawnedObject;
 
-            // Calculate position for question mark
             Vector3 dishTopCenter = spawnedObject.transform.position;
             Renderer objectRenderer = spawnedObject.GetComponent<Renderer>();
             if (objectRenderer != null)
             {
-                dishTopCenter += Vector3.up * objectRenderer.bounds.extents.y; // Add half the height to reach the top
+                dishTopCenter += Vector3.up * objectRenderer.bounds.extents.y * 2f;
             }
             else
             {
-                dishTopCenter += Vector3.up * 0.5f; // Fallback if no renderer is available
+                dishTopCenter += Vector3.up * 2f;
             }
 
-            // Spawn the question mark
             if (questionMarkPrefab != null)
             {
                 questionMark = Instantiate(
                     questionMarkPrefab,
                     dishTopCenter,
-                    spawnedObject.transform.rotation
+                    trackedImage.transform.rotation
                 );
-                questionMark.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+                questionMark.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
 
             Debug.Log($"Spawned {selectedItem} at marker with question mark on top.");
@@ -187,6 +204,8 @@ public class MenuActions : MonoBehaviour
         {
             MenuItem.Kebab => kebabPrefab,
             MenuItem.Shakriyeh => shakriyehPrefab,
+            MenuItem.Kibbeh => kibbehPrefab,
+            MenuItem.Fattoush => fattoushPrefab,
             _ => null
         };
     }
@@ -195,6 +214,8 @@ public class MenuActions : MonoBehaviour
     {
         None,
         Kebab,
-        Shakriyeh
+        Shakriyeh,
+        Kibbeh,
+        Fattoush
     }
 }

@@ -4,8 +4,6 @@ using UnityEngine;
 public class WebviewHandler : MonoBehaviour
 {
     private WebViewObject webViewObject;
-    private bool shouldCenterMap = true;
-
     void Start()
     {
         webViewObject = (new GameObject("WebViewObject")).AddComponent<WebViewObject>();
