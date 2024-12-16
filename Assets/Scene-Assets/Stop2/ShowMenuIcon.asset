@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b73af2399794b038208dbeaf048b9b, type: 3}
   m_Name: ShowMenuIcon
   m_EditorClassIdentifier: 
-  menuIconCanvasPrefab: {fileID: 3136410297120973674, guid: 77b382e0528a64125aef26bff2ccdb65,
+  menuIconCanvasPrefab: {fileID: 4818657142594942666, guid: 74f8f839d1d014f8c8c1595bb100730e,
     type: 3}

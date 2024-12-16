@@ -6,7 +6,7 @@ public class WebviewHandler : MonoBehaviour
     private WebViewObject webViewObject;
     void Start()
     {
-        webViewObject = (new GameObject("WebViewObject")).AddComponent<WebViewObject>();
+        webViewObject = gameObject.AddComponent<WebViewObject>();
         webViewObject.Init(
             cb: (msg) => Debug.Log($"CallFromJS: {msg}"),
             err: (msg) => Debug.LogError($"WebView Error: {msg}"),
@@ -23,6 +23,7 @@ public class WebviewHandler : MonoBehaviour
         webViewObject.SetMargins(0, 0, 0, 220);
         webViewObject.SetVisibility(true);
         webViewObject.SetScrollbarsVisibility(false);
+        webViewObject.SetScrollBounceEnabled(false);
         webViewObject.SetAlertDialogEnabled(true);
         webViewObject.SetCameraAccess(true);
 
