@@ -1,40 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public class WebviewHandler : MonoBehaviour
 {
     private WebViewObject webViewObject;
+    private bool shouldCenterMap = true;
 
     void Start()
     {
-        webViewObject = gameObject.AddComponent<WebViewObject>();
-
+        webViewObject = (new GameObject("WebViewObject")).AddComponent<WebViewObject>();
         webViewObject.Init(
-            cb: (msg) =>
-            {
-                Debug.Log($"Message from WebView: {msg}");
-                if (msg == "LOAD_FINISHED")
-                {
-                    Debug.Log("WebView has successfully loaded the URL.");
-                    webViewObject.EvaluateJS(@"
-                        console.log('Unity WebView loaded, checking Google Maps...');
-                        
-                        window.onerror = function(message, source, lineno, colno, error) {
-                            console.error('JavaScript Error:', message, source, lineno, colno, error);
-                            unityCallback('JavaScript Error: ' + message + ' at ' + source + ':' + lineno + ':' + colno);
-                        };
-
-                        if (typeof google === 'undefined') {
-                            console.error('Google Maps API not loaded');
-                        } else {
-                            console.log('Google Maps API is available');
-                            if (typeof google.maps !== 'undefined' && map) {
-                                google.maps.event.trigger(map, 'resize');
-                            }
-                        }
-                    ");
-                }
-            },
-
+            cb: (msg) => Debug.Log($"CallFromJS: {msg}"),
             err: (msg) => Debug.LogError($"WebView Error: {msg}"),
             httpErr: (msg) => Debug.LogError($"HTTP Error: {msg}"),
             started: (msg) => Debug.Log($"WebView Started: {msg}"),
@@ -52,11 +28,43 @@ public class WebviewHandler : MonoBehaviour
         webViewObject.SetAlertDialogEnabled(true);
         webViewObject.SetCameraAccess(true);
 
-
-
         string url = "https://ar.eyupc.dev";
         Debug.Log($"Attempting to load URL: {url}");
         webViewObject.LoadURL(url);
+
+        StartCoroutine(StartLocationService());
+    }
+
+    IEnumerator StartLocationService()
+    {
+        if (!Input.location.isEnabledByUser)
+        {
+            Debug.LogError("Location services are not enabled by the user.");
+            yield break;
+        }
+
+        Input.location.Start();
+
+        int maxWait = 20;
+        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+        {
+            yield return new WaitForSeconds(1);
+            maxWait--;
+        }
+
+        if (maxWait <= 0)
+        {
+            Debug.LogError("Timed out while initializing location services.");
+            yield break;
+        }
+
+        if (Input.location.status == LocationServiceStatus.Failed)
+        {
+            Debug.LogError("Unable to determine device location.");
+            yield break;
+        }
+
+        Input.location.Stop();
     }
 
     void Update()
