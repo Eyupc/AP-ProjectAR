@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarPrefab: {fileID: 3561998431760403027, guid: ce38ffd8d5ce84bb3b4a71e3c8d31839,
     type: 3}
+  welcomeOverlayPrefab: {fileID: 7080766145719088569, guid: b8b049e999f424cdebeeb76589aa01f6,
+    type: 3}
