@@ -67,24 +67,31 @@ public class MenuActions : MonoBehaviour
     {
         selectedItem = MenuItem.Kebab;
         UpdateAllSpawnedObjects();
+        menuCanvas.SetActive(false);
     }
 
     public void OrderShakriyeh()
     {
         selectedItem = MenuItem.Shakriyeh;
         UpdateAllSpawnedObjects();
+        menuCanvas.SetActive(false);
+
     }
 
     public void OrcderKibbeh()
     {
         selectedItem = MenuItem.Kibbeh;
         UpdateAllSpawnedObjects();
+        menuCanvas.SetActive(false);
+
     }
 
     public void OrderFattoush()
     {
         selectedItem = MenuItem.Fattoush;
         UpdateAllSpawnedObjects();
+        menuCanvas.SetActive(false);
+
     }
 
     private void UpdateAllSpawnedObjects()
