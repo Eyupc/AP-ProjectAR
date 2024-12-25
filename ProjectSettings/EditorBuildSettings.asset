@@ -6,25 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Dev-Scenes/SampleScene.unity
     guid: 4755b35b590504809a7525fd2109c2e2
   - enabled: 0
-    path: Assets/Scenes/ARFoundationQRVisualizationSample.unity
+    path: Assets/Scenes/Dev-Scenes/ARFoundationQRVisualizationSample.unity
     guid: 345ee45186083674592ed67b13839ea6
   - enabled: 1
     path: Assets/Scenes/ProjectScene.unity
     guid: 18fa7b8f9bb9b43e7bc19f6fc09a1495
   - enabled: 0
-    path: Assets/Scenes/TestScene.unity
+    path: Assets/Scenes/Dev-Scenes/TestScene.unity
     guid: 51d900f59dc8b8d4db0eb5fab422cb2a
   - enabled: 0
-    path: Assets/Scenes/HomeScreen.unity
+    path: Assets/Scenes/Dev-Scenes/HomeScreen.unity
     guid: ded0e019552935c4f9c92096beae02a3
   - enabled: 0
-    path: Assets/Scenes/menuScene.unity
+    path: Assets/Scenes/Dev-Scenes/menuScene.unity
     guid: 693b00a7c150fe7438f429dba510cfdd
   - enabled: 0
-    path: Assets/Scenes/ArMarker.unity
+    path: Assets/Scenes/Dev-Scenes/ArMarker.unity
     guid: 16ca1a6e124ba4d4987f104414691574
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,

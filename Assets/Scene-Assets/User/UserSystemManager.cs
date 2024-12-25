@@ -17,11 +17,13 @@ public static class UserSystemManager
         {
             string json = File.ReadAllText(SAVE_FILE);
             userData = JsonUtility.FromJson<UserData>(json);
+            Debug.Log("EYUP-User data loaded");
         }
         else
         {
             userData = new UserData();
             InitializeDefaultStops();
+            Debug.Log("EYUP-User data not loaded");
         }
     }
 
@@ -37,6 +39,8 @@ public static class UserSystemManager
     {
         string json = JsonUtility.ToJson(userData);
         File.WriteAllText(SAVE_FILE, json);
+
+        Debug.Log("EYUP-User data saved");
     }
 
     public static void CompleteStop(string stopId)
@@ -88,27 +92,24 @@ public static class UserSystemManager
         }
     }
 
-    public static void setCharacterGender(int characterId) {
-        userData.characterId = characterId;
+
+    public static Character Character
+    {
+        get { return userData.character; }
+        set { userData.character = value; }
     }
 
-    public static int getCharacterGender() {
-        return userData.characterId;
+
+    public static Language Language
+    {
+        get { return userData.language; }
+        set { userData.language = value; }
     }
 
-    public static void setLanguage(int languageId) {
-        userData.languageId = languageId;
+    public static AudioState AudioState
+    {
+        get { return userData.audioState; }
+        set { userData.audioState = value; }
     }
 
-    public static int getLanguage() {
-        return userData.languageId;
-    }
-
-    public static void setMute(int muteId) {
-        userData.muteId = muteId;
-    }
-
-    public static int getMute() {
-        return userData.muteId;
-    }
 }
