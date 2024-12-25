@@ -9,41 +9,77 @@ public class SessionManager : MonoBehaviour
     public TMP_Dropdown CharacterDropdown, languageDropdown, muteDropdown;
 
 
-    // Start is called before the first frame update
     void Start()
     {
+        InitializeDropdowns();
         UserSystemManager.LoadData();
+        LoadSettings();
         SetVolume();
     }
 
-    private void SetVolume() {
-        AudioListener.volume = UserSystemManager.getMute();
-        Debug.Log("volume: " + UserSystemManager.getMute());
+    private void InitializeDropdowns()
+    {
+        CharacterDropdown.ClearOptions();
+        CharacterDropdown.AddOptions(new List<string> {
+            Character.Man.ToString(),
+            Character.Woman.ToString()
+        });
+
+        languageDropdown.ClearOptions();
+        languageDropdown.AddOptions(new List<string> {
+            Language.Dutch.ToString(),
+            Language.Arabic.ToString()
+        });
+
+        muteDropdown.ClearOptions();
+        muteDropdown.AddOptions(new List<string> {
+            AudioState.Unmuted.ToString(),
+            AudioState.Muted.ToString()
+        });
+
+        CharacterDropdown.onValueChanged.AddListener(OnCharacterChanged);
+        languageDropdown.onValueChanged.AddListener(OnLanguageChanged);
+        muteDropdown.onValueChanged.AddListener(OnMuteChanged);
     }
 
-    // Update is called once per frame
+    private void OnCharacterChanged(int value)
+    {
+        UserSystemManager.Character = (Character)value;
+        UserSystemManager.SaveData();
+    }
+
+    private void OnLanguageChanged(int value)
+    {
+        UserSystemManager.Language = (Language)value;
+        UserSystemManager.SaveData();
+    }
+
+    private void OnMuteChanged(int value)
+    {
+        UserSystemManager.AudioState = (AudioState)value;
+        UserSystemManager.SaveData();
+        SetVolume();
+    }
+
     public void LoadSettings()
     {
-        int gender = UserSystemManager.getCharacterGender();
-        int language = UserSystemManager.getLanguage();
-        int muted = UserSystemManager.getMute();
-
-        CharacterDropdown.value = gender;
-        languageDropdown.value = language;
-        muteDropdown.value = muted;
-
+        CharacterDropdown.value = (int)UserSystemManager.Character;
+        languageDropdown.value = (int)UserSystemManager.Language;
+        muteDropdown.value = (int)UserSystemManager.AudioState;
     }
 
-    public void SaveSettings() {
-        int gender = CharacterDropdown.value;
-        int language = languageDropdown.value;
-        int muted = muteDropdown.value;
-
-        UserSystemManager.setCharacterGender(gender);
-        UserSystemManager.setLanguage(language);
-        UserSystemManager.setMute(muted);
+    public void SaveSettings()
+    {
+        UserSystemManager.Character = (Character)CharacterDropdown.value;
+        UserSystemManager.Language = (Language)languageDropdown.value;
+        UserSystemManager.AudioState = (AudioState)muteDropdown.value;
 
         UserSystemManager.SaveData();
         SetVolume();
+    }
+
+    private void SetVolume()
+    {
+        AudioListener.volume = UserSystemManager.AudioState == AudioState.Unmuted ? 1 : 0;
     }
 }
