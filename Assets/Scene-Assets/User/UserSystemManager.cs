@@ -87,4 +87,28 @@ public static class UserSystemManager
             SaveData();
         }
     }
+
+    public static void setCharacterGender(int characterId) {
+        userData.characterId = characterId;
+    }
+
+    public static int getCharacterGender() {
+        return userData.characterId;
+    }
+
+    public static void setLanguage(int languageId) {
+        userData.languageId = languageId;
+    }
+
+    public static int getLanguage() {
+        return userData.languageId;
+    }
+
+    public static void setMute(int muteId) {
+        userData.muteId = muteId;
+    }
+
+    public static int getMute() {
+        return userData.muteId;
+    }
 }
