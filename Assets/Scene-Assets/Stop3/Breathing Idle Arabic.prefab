@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_Name
-      value: Breathing Idle 3
+      value: Breathing Idle Arabic
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
@@ -152,19 +152,29 @@ MonoBehaviour:
   subtitlePosition: {fileID: 0}
   textHeight: 2
   subtitles:
-  - text: Oh, de beroemde zeep van Aleppo.
+  - text: "\u0622\u0647\u060C \u0635\u0627\u0628\u0648\u0646 \u062D\u0644\u0628 \u0627\u0644\u0634\u0647\u064A\u0631."
     startTime: 0
     endTime: 3
-  - text: Deze werd in mijn thuisland al duizenden jaren met de hand gemaakt, van
-      pure olijfolie en laurierolie.
+  - text: "\u0644\u0642\u062F \u062A\u0645 \u062A\u0635\u0646\u064A\u0639\u0647 \u064A\u062F\u0648\u064A\u064B\u0627
+      \u0641\u064A \u0628\u0644\u062F\u064A \u0645\u0646\u0630 \u0622\u0644\u0627\u0641
+      \u0627\u0644\u0633\u0646\u064A\u0646\u060C \u0645\u0646 \u0632\u064A\u062A
+      \u0627\u0644\u0632\u064A\u062A\u0648\u0646 \u0627\u0644\u0646\u0642\u064A \u0648\u0632\u064A\u062A
+      \u0627\u0644\u063A\u0627\u0631."
     startTime: 3
     endTime: 9
-  - text: Het is een traditie die door families werd doorgegeven, een product vol
-      zorg en ambacht.
+  - text: "\u0625\u0646\u0647 \u062A\u0642\u0644\u064A\u062F \u0645\u062A\u0648\u0627\u0631\u062B
+      \u0639\u0628\u0631 \u0627\u0644\u0639\u0627\u0626\u0644\u0627\u062A\u060C \u0648\u0647\u0648
+      \u0645\u0646\u062A\u062C \u0645\u0644\u064A\u0621 \u0628\u0627\u0644\u0639\u0646\u0627\u064A\u0629
+      \u0648\u0627\u0644\u062D\u0631\u0641\u064A\u0629."
     startTime: 9
     endTime: 14
-  - text: Mijn vrouw verkocht deze zeep in haar winkel, en het bracht niet alleen
-      reinheid, maar ook een stukje van onze cultuur naar mensen over de hele wereld.
+  - text: "\u0643\u0627\u0646\u062A \u0632\u0648\u062C\u062A\u064A \u062A\u0628\u064A\u0639
+      \u0647\u0630\u0627 \u0627\u0644\u0635\u0627\u0628\u0648\u0646 \u0641\u064A
+      \u0645\u062A\u062C\u0631\u0647\u0627\u060C \u0648\u0644\u0645 \u064A\u062C\u0644\u0628
+      \u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0641\u0642\u0637\u060C \u0628\u0644
+      \u062C\u0644\u0628 \u0623\u064A\u0636\u064B\u0627 \u062C\u0632\u0621\u064B\u0627
+      \u0645\u0646 \u062B\u0642\u0627\u0641\u062A\u0646\u0627 \u0644\u0644\u0646\u0627\u0633
+      \u0641\u064A \u062C\u0645\u064A\u0639 \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0639\u0627\u0644\u0645."
     startTime: 14
     endTime: 22
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
