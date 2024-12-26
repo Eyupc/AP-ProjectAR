@@ -1,8 +1,9 @@
-using UnityEngine;
-using TMPro;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
 
-public class PlayPoem : MonoBehaviour
+public class PlayIntroduction : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip audioClip;
@@ -10,15 +11,25 @@ public class PlayPoem : MonoBehaviour
     [SerializeField] private float textHeight = 2f;
     [SerializeField] private List<SubtitleLine> subtitles = new List<SubtitleLine>();
     [SerializeField] private TMP_FontAsset garamondFont;
+    [SerializeField] private GameObject prefabToShow;
+    //[SerializeField] private MonoBehaviour scriptToActivate;
+    private float audioDelay = 3f;
 
+    private GameObject instantiatedPrefab;
     private TextMeshPro subtitleText;
     private float audioStartTime;
     private bool isPlaying;
 
     void Start()
     {
+        //if (scriptToActivate != null)
+        //{
+        //    scriptToActivate.enabled = false;
+        //}
+
         CreateSubtitleText();
         subtitleText.text = "";
+        Invoke(nameof(PlayAudioWithSubtitles), audioDelay);
     }
 
     void CreateSubtitleText()
@@ -44,22 +55,6 @@ public class PlayPoem : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(touch.position);
-                RaycastHit hit;
-
-                if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
-                {
-                    PlayAudioWithSubtitles();
-                }
-            }
-        }
-
         if (isPlaying && audioSource.isPlaying)
         {
             UpdateSubtitles();
@@ -68,12 +63,15 @@ public class PlayPoem : MonoBehaviour
         {
             isPlaying = false;
             subtitleText.text = "";
-            UserSystemManager.CompleteStop("Poem");
-            UserSystemManager.AdvanceToNextStop();
+
+            if (instantiatedPrefab == null && prefabToShow != null)
+            {
+                instantiatedPrefab = Instantiate(prefabToShow);
+            }
         }
     }
 
-    void PlayAudioWithSubtitles()
+    public void PlayAudioWithSubtitles()
     {
         if (!audioSource.isPlaying)
         {
@@ -104,20 +102,5 @@ public class PlayPoem : MonoBehaviour
             isPlaying = false;
             subtitleText.text = "";
         }
-    }
-}
-public class FaceCamera : MonoBehaviour
-{
-    private Transform mainCamera;
-
-    void Start()
-    {
-        mainCamera = Camera.main.transform;
-    }
-
-    void LateUpdate()
-    {
-        transform.LookAt(transform.position + mainCamera.rotation * Vector3.forward,
-            mainCamera.rotation * Vector3.up);
     }
 }

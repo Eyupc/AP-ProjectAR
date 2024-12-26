@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1cbd3dd790c670243864b161372361b5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - audioClip: {instanceID: 0}
+  - subtitlePosition: {instanceID: 0}
+  - garamondFont: {instanceID: 0}
+  - prefabToShow: {fileID: 7080766145719088569, guid: 68d278b519dff0849ac32b284020090c,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
