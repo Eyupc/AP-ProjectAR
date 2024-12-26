@@ -440,6 +440,12 @@ PrefabInstance:
       objectReference: {fileID: 1852767995}
     - target: {fileID: -2325597591150924614, guid: ce38ffd8d5ce84bb3b4a71e3c8d31839,
         type: 3}
+      propertyPath: prefabToShow
+      value: 
+      objectReference: {fileID: 7080766145719088569, guid: 68d278b519dff0849ac32b284020090c,
+        type: 3}
+    - target: {fileID: -2325597591150924614, guid: ce38ffd8d5ce84bb3b4a71e3c8d31839,
+        type: 3}
       propertyPath: subtitles.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -608,6 +614,11 @@ PrefabInstance:
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 231cc5eceebb1534baf9b6ee0dc35125, type: 3}
+    - target: {fileID: 5021592392831125193, guid: ce38ffd8d5ce84bb3b4a71e3c8d31839,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
