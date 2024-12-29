@@ -1,11 +1,18 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class WebviewHandler : MonoBehaviour
 {
     private WebViewObject webViewObject;
+
+    void OnDestroy()
+    {
+        UserSystemManager.OnStopCompleted -= HandleStopCompleted;
+    }
     void Start()
     {
+        UserSystemManager.OnStopCompleted += HandleStopCompleted;
         webViewObject = gameObject.AddComponent<WebViewObject>();
         webViewObject.Init(
             cb: (msg) => Debug.Log($"CallFromJS: {msg}"),
@@ -27,7 +34,14 @@ public class WebviewHandler : MonoBehaviour
         webViewObject.SetAlertDialogEnabled(true);
         webViewObject.SetCameraAccess(true);
 
+        var completedStops = UserSystemManager.GetCompletedStops();
         string url = "https://ar.eyupc.dev";
+        if (completedStops != null)
+        {
+            string stops = string.Join(",", completedStops);
+            url = $"https://ar.eyupc.dev?completed={stops}";
+        }
+
         Debug.Log($"Attempting to load URL: {url}");
         webViewObject.LoadURL(url);
 
@@ -72,5 +86,20 @@ public class WebviewHandler : MonoBehaviour
         {
             webViewObject.GoBack();
         }
+    }
+
+    void HandleStopCompleted()
+    {
+        Debug.Log("AAA-HandleStopCompleted");
+        var completedStops = UserSystemManager.GetCompletedStops();
+        string url = "https://ar.eyupc.dev";
+        if (completedStops != null)
+        {
+            string stops = string.Join(",", completedStops);
+            url = $"https://ar.eyupc.dev?completed={stops}";
+            Debug.Log($"Refreshing map with completed stops: {stops}");
+        }
+
+        webViewObject.LoadURL(url);
     }
 }

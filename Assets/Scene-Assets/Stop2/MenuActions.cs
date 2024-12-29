@@ -217,6 +217,13 @@ public class MenuActions : MonoBehaviour
         };
     }
 
+    public void CompleteStop()
+    {
+        UserSystemManager.CompleteStop(2);
+        TrackingManager trackingManager = FindObjectOfType<TrackingManager>();
+        trackingManager.EnableQRTracking();
+    }
+
     public enum MenuItem
     {
         None,

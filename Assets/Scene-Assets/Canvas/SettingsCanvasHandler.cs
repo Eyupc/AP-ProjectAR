@@ -13,6 +13,12 @@ public class SettingsCanvasHandler : MonoBehaviour
         settingsIcon.SetActive(false);
     }
 
+    public void ResetSession()
+    {
+        UserSystemManager.ResetSession();
+        TrackingManager trackingManager = FindObjectOfType<TrackingManager>();
+        trackingManager.EnableQRTracking();
+    }
     public void onSettingsCloseButtonClick()
     {
         settingsCanvas.SetActive(false);

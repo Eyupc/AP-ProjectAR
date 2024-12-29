@@ -1,11 +1,16 @@
 using UnityEngine;
 using System.IO;
 using Unity.VisualScripting;
+using System.Linq;
+using System.Collections.Generic;
+using System;
 
 public static class UserSystemManager
 {
     private static string SAVE_FILE => Path.Combine(Application.persistentDataPath, "user_data.json");
     private static UserData userData;
+    public static event System.Action OnStopCompleted = delegate { };
+
     static UserSystemManager()
     {
         LoadData();
@@ -27,11 +32,17 @@ public static class UserSystemManager
         }
     }
 
+    public static void ResetSession()
+    {
+        userData = new UserData();
+        InitializeDefaultStops();
+        OnStopCompleted.Invoke();
+    }
     private static void InitializeDefaultStops()
     {
-        userData.completedStops.Add(new StopData("Poem", "The Poem Stop"));
-        userData.completedStops.Add(new StopData("Restaurant", "The Restaurant Stop"));
-        userData.completedStops.Add(new StopData("AleppoSoap", "Aleppo Soap Stop"));
+        userData.stops.Add(new StopData(1, "Poem"));
+        userData.stops.Add(new StopData(2, "Restaurant"));
+        userData.stops.Add(new StopData(3, "AleppoSoap"));
         SaveData();
     }
 
@@ -39,13 +50,12 @@ public static class UserSystemManager
     {
         string json = JsonUtility.ToJson(userData);
         File.WriteAllText(SAVE_FILE, json);
-
         Debug.Log("EYUP-User data saved");
     }
 
-    public static void CompleteStop(string stopId)
+    public static void CompleteStop(int stopId)
     {
-        var stop = userData.completedStops.Find(s => s.stopId == stopId);
+        var stop = userData.stops.Find(s => s.stopId == stopId);
         if (stop != null && !stop.isCompleted)
         {
             stop.isCompleted = true;
@@ -54,42 +64,33 @@ public static class UserSystemManager
 
             switch (stop.stopId)
             {
-                case "Poem":
+                case 1:
                     var obj = GameObject.FindWithTag("Stop1_Player");
                     if (obj != null) GameObject.Destroy(obj);
                     break;
-                case "Restaurant":
+                case 2:
+                    var menuCanvasObj = GameObject.FindWithTag("MenuCanvas");
+                    menuCanvasObj.SetActive(false);
                     break;
-                case "AleppoSoap":
+                case 3:
                     break;
                 default:
                     break;
             }
+            Debug.Log("AAA-Called StopCompleted");
+            OnStopCompleted.Invoke();
         }
     }
 
-    public static bool IsStopCompleted(string stopId)
+    public static bool IsStopCompleted(string stopName)
     {
-        var stop = userData.completedStops.Find(s => s.stopId == stopId);
+        var stop = userData.stops.Find(s => s.stopName == stopName);
         return stop?.isCompleted ?? false;
     }
 
-    public static StopData GetCurrentStop()
+    public static List<int>? GetCompletedStops()
     {
-        if (userData.currentStopIndex < userData.completedStops.Count)
-        {
-            return userData.completedStops[userData.currentStopIndex];
-        }
-        return null;
-    }
-
-    public static void AdvanceToNextStop()
-    {
-        if (userData.currentStopIndex < userData.completedStops.Count - 1)
-        {
-            userData.currentStopIndex++;
-            SaveData();
-        }
+        return userData.stops.Count(v => v.isCompleted) > 0 ? userData.stops.Where(v => v.isCompleted).Select((v) => v.stopId).ToList() : null;
     }
 
 

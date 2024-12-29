@@ -10,6 +10,7 @@ public class PlayPoem : MonoBehaviour
     [SerializeField] private float textHeight = 2f;
     [SerializeField] private List<SubtitleLine> subtitles = new List<SubtitleLine>();
     [SerializeField] private TMP_FontAsset garamondFont;
+    [SerializeField] public int StopId = 1;
 
     private TextMeshPro subtitleText;
     private float audioStartTime;
@@ -68,8 +69,9 @@ public class PlayPoem : MonoBehaviour
         {
             isPlaying = false;
             subtitleText.text = "";
-            UserSystemManager.CompleteStop("Poem");
-            UserSystemManager.AdvanceToNextStop();
+            Destroy(this.gameObject);
+            if (StopId == 1) UserSystemManager.CompleteStop(1);
+            Debug.Log("AAA-Ended Poem");
         }
     }
 

@@ -6,7 +6,6 @@ public class NavController : MonoBehaviour
 {
     public GameObject homeCanvas;
     public GameObject mapCanvas;
-    public GameObject settingsCanvas;
 
     public void ShowUI(string target)
     {
@@ -14,7 +13,6 @@ public class NavController : MonoBehaviour
         if (mapCanvas.GetComponent<WebViewObject>() != null)
             mapCanvas.GetComponent<WebViewObject>().SetVisibility(false);
         mapCanvas.SetActive(false);
-        settingsCanvas.SetActive(false);
 
         switch (target)
         {
@@ -26,10 +24,6 @@ public class NavController : MonoBehaviour
                 mapCanvas.SetActive(true);
                 mapCanvas.GetComponent<WebViewObject>().SetVisibility(true);
                 Debug.Log(" Map is now visible.");
-                break;
-            case "Settings":
-                settingsCanvas.SetActive(true);
-                Debug.Log("Settings now visible");
                 break;
             default:
                 break;

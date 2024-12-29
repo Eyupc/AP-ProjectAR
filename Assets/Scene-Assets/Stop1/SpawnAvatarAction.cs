@@ -5,7 +5,7 @@ public class SpawnAvatarAction : QRActionBase
 {
     [SerializeField] private GameObject avatarPrefab;
     [SerializeField] private GameObject welcomeOverlayPrefab;
-    public override string QRCodeText => "Avatar";
+    public override string QRCodeText => "Poem";
 
     public override void Execute(Vector3 position, Quaternion rotation)
     {
