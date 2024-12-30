@@ -16,6 +16,7 @@ public class PlayPoem : MonoBehaviour
     private float audioStartTime;
     private bool isPlaying;
 
+    public event System.Action OnPoemEnd = delegate { };
     void Start()
     {
         CreateSubtitleText();
@@ -71,6 +72,8 @@ public class PlayPoem : MonoBehaviour
             subtitleText.text = "";
             Destroy(this.gameObject);
             if (StopId == 1) UserSystemManager.CompleteStop(1);
+
+            OnPoemEnd.Invoke();
             Debug.Log("AAA-Ended Poem");
         }
     }

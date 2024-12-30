@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ShowMenuIcon", menuName = "QR Actions/Show Menu Icon")]
+[CreateAssetMenu(fileName = "ShowMenuIcon", menuName = "QR Actions/Show Menu Icon & Spawn Avatar")]
 public class ShowMenuIcon : QRActionBase
 {
     [SerializeField] private GameObject menuIconCanvasPrefab;
@@ -22,12 +22,10 @@ public class ShowMenuIcon : QRActionBase
     }
     private void SpawnMenuIcon()
     {
-        var menuObj = Instantiate(menuIconCanvasPrefab);
-        menuObj.SetActive(true);
         SpawnAvatar();
     }
 
-    private void SpawnAvatar() 
+    private void SpawnAvatar()
     {
         Camera mainCamera = Camera.main;
         if (mainCamera != null)
@@ -39,6 +37,11 @@ public class ShowMenuIcon : QRActionBase
 
             GameObject avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity);
             avatar.transform.LookAt(new Vector3(userPosition.x, avatar.transform.position.y, userPosition.z));
+            avatar.GetComponent<PlayPoem>().OnPoemEnd += () =>
+            {
+                var menuObj = Instantiate(menuIconCanvasPrefab);
+                menuObj.SetActive(true);
+            };
         }
     }
 }
