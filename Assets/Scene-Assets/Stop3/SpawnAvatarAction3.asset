@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarPrefab: {fileID: 3561998431760403027, guid: 5faa9ef59fed93f49bbde8040e29051a,
     type: 3}
+  avatarArabicPrefab: {fileID: 3561998431760403027, guid: 796ba9fbc711e5841aa13fdc5f37675e,
+    type: 3}

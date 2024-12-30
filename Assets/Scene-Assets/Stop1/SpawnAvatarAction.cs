@@ -1,10 +1,14 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 [CreateAssetMenu(fileName = "SpawnAvatarAction", menuName = "QR Actions/Spawn Avatar")]
 public class SpawnAvatarAction : QRActionBase
 {
     [SerializeField] private GameObject avatarPrefab;
+    [SerializeField] private GameObject avatarArabicPrefab;
     [SerializeField] private GameObject welcomeOverlayPrefab;
+    private Language language = new Language();
+    private Character character = new Character();
     public override string QRCodeText => "Avatar";
 
     public override void Execute(Vector3 position, Quaternion rotation)
@@ -14,7 +18,8 @@ public class SpawnAvatarAction : QRActionBase
         {
             GameObject overlayObj = Instantiate(welcomeOverlayPrefab);
             overlayObj.GetComponent<StopStartCanvasHandler>().OnCloseClicked += SpawnAvatar;
-
+            language = UserSystemManager.Language;
+            character = UserSystemManager.Character;
         }
     }
 
@@ -25,7 +30,13 @@ public class SpawnAvatarAction : QRActionBase
         Vector3 rightDirection = camera.transform.right;
         Vector3 spawnPosition = userPosition + rightDirection * -2f;
         spawnPosition.y -= 1.7f;
-        GameObject avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity);
-        avatar.transform.LookAt(new Vector3(userPosition.x, avatar.transform.position.y, userPosition.z));
+        GameObject avatar = null;
+        if (language == Language.Dutch) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }
+        else { avatar = Instantiate(avatarArabicPrefab, spawnPosition, Quaternion.identity); }
+
+        if (avatar != null) 
+        {
+            avatar.transform.LookAt(new Vector3(userPosition.x, avatar.transform.position.y, userPosition.z));
+        }
     }
 }
