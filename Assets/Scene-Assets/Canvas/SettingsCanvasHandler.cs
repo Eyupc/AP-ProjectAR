@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingsCanvasHandler : MonoBehaviour
 {
@@ -16,8 +17,7 @@ public class SettingsCanvasHandler : MonoBehaviour
     public void ResetSession()
     {
         UserSystemManager.ResetSession();
-        TrackingManager trackingManager = FindObjectOfType<TrackingManager>();
-        trackingManager.EnableQRTracking();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void onSettingsCloseButtonClick()
     {

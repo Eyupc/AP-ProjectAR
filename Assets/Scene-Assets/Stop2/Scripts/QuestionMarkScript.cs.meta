@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 22e0db96129c14573b23d2955102e86a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - kebabInfo: {fileID: 3459268573470351259, guid: 0ea4d2fb7f50e473787fb57b1ff957f7,
+      type: 3}
+  - shakriyehInfo: {fileID: 2729908693042395613, guid: 05b31682cbe3339408b2ee9c8bc9cfb9,
+      type: 3}
+  - fattoushInfo: {fileID: 7159765496909107208, guid: e2212f7c42c8caf4b8ef7e72548e73ac,
+      type: 3}
+  - kibbehInfo: {fileID: 286906028116104736, guid: 7aef8620316a649eaa331f9d73c7841f,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

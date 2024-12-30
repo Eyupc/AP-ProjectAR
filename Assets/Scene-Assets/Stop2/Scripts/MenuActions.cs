@@ -198,6 +198,7 @@ public class MenuActions : MonoBehaviour
                     dishTopCenter,
                     trackedImage.transform.rotation
                 );
+                questionMark.GetComponent<QuestionMarkScript>().SetInfo(selectedItem);
                 questionMark.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
 
@@ -224,12 +225,12 @@ public class MenuActions : MonoBehaviour
         trackingManager.EnableQRTracking();
     }
 
-    public enum MenuItem
-    {
-        None,
-        Kebab,
-        Shakriyeh,
-        Kibbeh,
-        Fattoush
-    }
+}
+public enum MenuItem
+{
+    None,
+    Kebab,
+    Shakriyeh,
+    Kibbeh,
+    Fattoush
 }

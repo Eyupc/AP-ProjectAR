@@ -39,18 +39,18 @@ public class TrackingManager : MonoBehaviour
         {
             arSession.Reset();
         }
-        if (qrTracker != null)
-        {
-            qrTracker.enabled = true;
-            qrCodeTracker.EnableTracking();
-            Debug.Log("QR Tracking Enabled");
-        }
-
         if (imageTracker != null)
         {
             imageTracker.enabled = false;
             imageTracker.trackedImagesChanged -= menuActions.OnTrackedImagesChanged;
             Debug.Log("Image Tracking Disabled");
+        }
+
+        if (qrTracker != null)
+        {
+            qrTracker.enabled = true;
+            qrCodeTracker.EnableTracking();
+            Debug.Log("QR Tracking Enabled");
         }
     }
 

@@ -8,7 +8,7 @@ public class SpawnAvatarAction3 : QRActionBase
     [SerializeField] private GameObject avatarArabicPrefab;
     private Language language = new Language();
     private Character character = new Character();
-    public override string QRCodeText => "Avatar3";
+    public override string QRCodeText => "AleppoSoap";
 
     public override void Execute(Vector3 position, Quaternion rotation)
     {
