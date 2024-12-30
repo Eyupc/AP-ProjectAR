@@ -7,9 +7,9 @@ public class SpawnAvatarAction : QRActionBase
     [SerializeField] private GameObject avatarPrefab;
     [SerializeField] private GameObject avatarArabicPrefab;
     [SerializeField] private GameObject welcomeOverlayPrefab;
+    public override string QRCodeText => "Poem";
     private Language language = new Language();
     private Character character = new Character();
-    public override string QRCodeText => "Avatar";
 
     public override void Execute(Vector3 position, Quaternion rotation)
     {
@@ -34,7 +34,7 @@ public class SpawnAvatarAction : QRActionBase
         if (language == Language.Dutch) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }
         else { avatar = Instantiate(avatarArabicPrefab, spawnPosition, Quaternion.identity); }
 
-        if (avatar != null) 
+        if (avatar != null)
         {
             avatar.transform.LookAt(new Vector3(userPosition.x, avatar.transform.position.y, userPosition.z));
         }

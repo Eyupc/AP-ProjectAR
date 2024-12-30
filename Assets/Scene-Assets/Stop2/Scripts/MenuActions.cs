@@ -198,6 +198,7 @@ public class MenuActions : MonoBehaviour
                     dishTopCenter,
                     trackedImage.transform.rotation
                 );
+                questionMark.GetComponent<QuestionMarkScript>().SetInfo(selectedItem);
                 questionMark.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
 
@@ -217,12 +218,19 @@ public class MenuActions : MonoBehaviour
         };
     }
 
-    public enum MenuItem
+    public void CompleteStop()
     {
-        None,
-        Kebab,
-        Shakriyeh,
-        Kibbeh,
-        Fattoush
+        UserSystemManager.CompleteStop(2);
+        TrackingManager trackingManager = FindObjectOfType<TrackingManager>();
+        trackingManager.EnableQRTracking();
     }
+
+}
+public enum MenuItem
+{
+    None,
+    Kebab,
+    Shakriyeh,
+    Kibbeh,
+    Fattoush
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class UserData
 {
-    public List<StopData> completedStops = new List<StopData>();
+    public List<StopData> stops = new List<StopData>();
     public int currentStopIndex = 0;
     public Character character = Character.Man;
     public Language language = Language.Dutch;
@@ -14,12 +14,12 @@ public class UserData
 [System.Serializable]
 public class StopData
 {
-    public string stopId;
+    public int stopId;
     public string stopName;
     public bool isCompleted;
     public System.DateTime completionDate;
 
-    public StopData(string id, string name)
+    public StopData(int id, string name)
     {
         stopId = id;
         stopName = name;

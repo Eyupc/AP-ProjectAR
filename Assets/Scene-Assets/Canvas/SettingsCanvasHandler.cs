@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingsCanvasHandler : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class SettingsCanvasHandler : MonoBehaviour
         settingsIcon.SetActive(false);
     }
 
+    public void ResetSession()
+    {
+        UserSystemManager.ResetSession();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void onSettingsCloseButtonClick()
     {
         settingsCanvas.SetActive(false);

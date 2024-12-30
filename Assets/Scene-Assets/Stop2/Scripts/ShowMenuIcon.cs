@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ShowMenuIcon", menuName = "QR Actions/Show Menu Icon")]
+[CreateAssetMenu(fileName = "ShowMenuIcon", menuName = "QR Actions/Show Menu Icon & Spawn Avatar")]
 public class ShowMenuIcon : QRActionBase
 {
     [SerializeField] private GameObject menuIconCanvasPrefab;
@@ -25,12 +25,10 @@ public class ShowMenuIcon : QRActionBase
     }
     private void SpawnMenuIcon()
     {
-        var menuObj = Instantiate(menuIconCanvasPrefab);
-        menuObj.SetActive(true);
         SpawnAvatar();
     }
 
-    private void SpawnAvatar() 
+    private void SpawnAvatar()
     {
         language = UserSystemManager.Language;
         character = UserSystemManager.Character;
@@ -45,6 +43,12 @@ public class ShowMenuIcon : QRActionBase
             if (language == Language.Dutch) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }
             else { avatar = Instantiate(avatarArabicPrefab, spawnPosition, Quaternion.identity); }
 
+            avatar.transform.LookAt(new Vector3(userPosition.x, avatar.transform.position.y, userPosition.z));
+            avatar.GetComponent<PlayPoem>().OnPoemEnd += () =>
+            {
+                var menuObj = Instantiate(menuIconCanvasPrefab);
+                menuObj.SetActive(true);
+            };
             if (avatar != null)
             {
                 avatar.transform.LookAt(new Vector3(userPosition.x, avatar.transform.position.y, userPosition.z));
