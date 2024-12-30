@@ -27,7 +27,7 @@ public class WebviewHandler : MonoBehaviour
             ua: "Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
         );
 
-        webViewObject.SetMargins(0, 0, 0, 280);
+        webViewObject.SetMargins(0, 0, 0, 240);
         webViewObject.SetVisibility(true);
         webViewObject.SetScrollbarsVisibility(false);
         webViewObject.SetScrollBounceEnabled(false);
