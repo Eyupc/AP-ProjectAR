@@ -168,7 +168,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welkom, bij stop 3!
+  m_text: "\u0645\u0631\u062D\u0628\u0627\u064B \u0628\u0643\u0645 \u0641\u064A \u0627\u0644\u0645\u062D\u0637\u0629
+    3!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -512,7 +513,7 @@ GameObject:
   - component: {fileID: 2913597612682510831}
   - component: {fileID: 3174510817469617070}
   m_Layer: 5
-  m_Name: StopStartCanvas3 Arabic
+  m_Name: StopStartCanvas3 Arab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -678,7 +679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sluit
+  m_text: "\u064A\u063A\u0644\u0642"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -812,7 +813,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hier bij deze stop zal je meer te weten komen over de beroemde Aleppo-zeep!
+  m_text: "\u0647\u0646\u0627 \u0641\u064A \u0647\u0630\u0647 \u0627\u0644\u0645\u062D\u0637\u0629
+    \u0633\u0648\u0641 \u062A\u062A\u0639\u0644\u0645 \u0627\u0644\u0645\u0632\u064A\u062F
+    \u0639\u0646 \u0635\u0627\u0628\u0648\u0646 \u062D\u0644\u0628 \u0627\u0644\u0634\u0647\u064A\u0631!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

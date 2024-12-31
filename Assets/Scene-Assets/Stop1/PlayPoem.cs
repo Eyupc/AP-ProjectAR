@@ -71,10 +71,15 @@ public class PlayPoem : MonoBehaviour
             isPlaying = false;
             subtitleText.text = "";
             Destroy(this.gameObject);
-            if (StopId == 1) UserSystemManager.CompleteStop(1);
-
+            if (StopId == 1)
+            {
+                UserSystemManager.CompleteStop(1);
+            }
+            else if (StopId == 3)
+            {
+                UserSystemManager.CompleteStop(3);
+            }
             OnPoemEnd.Invoke();
-            Debug.Log("AAA-Ended Poem");
         }
     }
 
