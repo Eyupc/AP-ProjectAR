@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4444959796438693634
+--- !u!1001 &8802059569512200144
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,124 +8,108 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
-        type: 3}
-      propertyPath: m_Name
-      value: Breathing Idle 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
-        type: 3}
-      propertyPath: m_TagString
-      value: Stop1_Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3708412383749799733, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - target: {fileID: -5880142723812087609, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 00ecbb329b555aa4a983ff54199d4b36, type: 2}
+      objectReference: {fileID: 2100000, guid: c856fe42f8fa4734bb65ff9a1916c9e7, type: 2}
+    - target: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_Name
+      value: Breathing Idle woman
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 819299982417054795}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+      addedObject: {fileID: 5070724051505135828}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5021592392831125193}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+      addedObject: {fileID: 6768093505811497967}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5248752376949655281}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+      addedObject: {fileID: -5652120965230789088}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6805237233417700850}
-  m_SourcePrefab: {fileID: 100100000, guid: 388acfa6a39e84d4aa0e9167d24954e4, type: 3}
---- !u!1 &3561998431760403027 stripped
+      addedObject: {fileID: -4698748365570032293}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2370497178378861327}
+  m_SourcePrefab: {fileID: 100100000, guid: 3512e115e550cf04f9a0f2c73abd2bbe, type: 3}
+--- !u!1 &8567635787126344321 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
     type: 3}
-  m_PrefabInstance: {fileID: 4444959796438693634}
+  m_PrefabInstance: {fileID: 8802059569512200144}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &819299982417054795
+--- !u!95 &5070724051505135828
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3561998431760403027}
+  m_GameObject: {fileID: 8567635787126344321}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 55881c1fe1cdbde46a5e09d0fdae855c, type: 2}
+  m_Controller: {fileID: 9100000, guid: c4b1b46b85276fe4d9676181a9da4db2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -136,52 +120,68 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5021592392831125193
+--- !u!114 &6768093505811497967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3561998431760403027}
+  m_GameObject: {fileID: 8567635787126344321}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbd3dd790c670243864b161372361b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: -4698748365570032293}
+  audioClip: {fileID: 8300000, guid: b686aa1ad0a596c4cb775830604e1632, type: 3}
+  subtitlePosition: {fileID: 0}
+  textHeight: 2
+  subtitles:
+  - text: "Po\xEBzie is een manier om gevoelens te uiten die niet altijd in woorden
+      passen."
+    startTime: 0
+    endTime: 4
+  - text: "In Syri\xEB wordt po\xEBzie vaak gebruikt om onze verhalen te delen, zowel
+      van vreugde als van verdriet."
+    startTime: 0
+    endTime: 10
+  - text: "Wist je dat Syri\xEB een rijke traditie heeft in po\xEBzie?"
+    startTime: 0
+    endTime: 14
+  garamondFont: {fileID: 0}
+  prefabToShow: {fileID: 7080766145719088569, guid: 68d278b519dff0849ac32b284020090c,
+    type: 3}
+--- !u!114 &-5652120965230789088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567635787126344321}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc6d0f6872e5f4c4cbeba701b11669d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: -5248752376949655281}
-  audioClip: {fileID: 8300000, guid: 7e927478cf4920f4eb47023d17264cb0, type: 3}
+  audioSource: {fileID: -4698748365570032293}
+  audioClip: {fileID: 8300000, guid: 1a130a2d9b9bc734ea88022196d728c9, type: 3}
   subtitlePosition: {fileID: 0}
   textHeight: 2
-  subtitles:
-  - text: Oh, de beroemde zeep van Aleppo.
-    startTime: 0
-    endTime: 3
-  - text: Deze werd in mijn thuisland al duizenden jaren met de hand gemaakt, van
-      pure olijfolie en laurierolie.
-    startTime: 3
-    endTime: 9
-  - text: Het is een traditie die door families werd doorgegeven, een product vol
-      zorg en ambacht.
-    startTime: 9
-    endTime: 14
-  - text: Mijn vrouw verkocht deze zeep in haar winkel, en het bracht niet alleen
-      reinheid, maar ook een stukje van onze cultuur naar mensen over de hele wereld.
-    startTime: 14
-    endTime: 22
-  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
+  subtitles: []
+  garamondFont: {fileID: 0}
   StopId: 1
---- !u!82 &-5248752376949655281
+--- !u!82 &-4698748365570032293
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3561998431760403027}
+  m_GameObject: {fileID: 8567635787126344321}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7e927478cf4920f4eb47023d17264cb0, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: b686aa1ad0a596c4cb775830604e1632, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -266,13 +266,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &6805237233417700850
+--- !u!65 &2370497178378861327
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3561998431760403027}
+  m_GameObject: {fileID: 8567635787126344321}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -285,5 +285,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.9946002, z: 1}
-  m_Center: {x: 0, y: 0.95872647, z: 0}
+  m_Size: {x: 1, y: 2.0445569, z: 1}
+  m_Center: {x: 0, y: 0.9264842, z: 0}
