@@ -30,6 +30,7 @@ public class PlayIntroduction : MonoBehaviour
         CreateSubtitleText();
         subtitleText.text = "";
         Invoke(nameof(PlayAudioWithSubtitles), audioDelay);
+        Debug.Log("The introduction starts");
     }
 
     void CreateSubtitleText()

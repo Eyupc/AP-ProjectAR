@@ -19,6 +19,10 @@ public class SubtitleCanvasHandler : MonoBehaviour
             {
                 scriptToActivate.enabled = false;
             }
+            else 
+            {
+                Debug.LogError("Poem script not found.");
+            }
         }
         else
         {
