@@ -11,22 +11,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.113
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
@@ -36,12 +36,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.374
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.42261827
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.9063079
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
@@ -66,12 +66,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 388acfa6a39e84d4aa0e9167d24954e4,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 388acfa6a39e84d4aa0e9167d24954e4,
         type: 3}
@@ -149,35 +154,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: -5248752376949655281}
+  audioClip: {fileID: 8300000, guid: 5dc3cbbf926b7e8439a50222f7dc3122, type: 3}
   subtitlePosition: {fileID: 0}
   textHeight: 2
   subtitles:
   - text: "\u0622\u0647\u060C \u0635\u0627\u0628\u0648\u0646 \u062D\u0644\u0628 \u0627\u0644\u0634\u0647\u064A\u0631."
     startTime: 0
     endTime: 3
-  - text: "\u0644\u0642\u062F \u062A\u0645 \u062A\u0635\u0646\u064A\u0639\u0647 \u064A\u062F\u0648\u064A\u064B\u0627
+  - text: "\u0643\u0627\u0646 \u064A\u064F\u0635\u0646\u0639 \u064A\u062F\u0648\u064A\u064B\u0627
       \u0641\u064A \u0628\u0644\u062F\u064A \u0645\u0646\u0630 \u0622\u0644\u0627\u0641
-      \u0627\u0644\u0633\u0646\u064A\u0646\u060C \u0645\u0646 \u0632\u064A\u062A
-      \u0627\u0644\u0632\u064A\u062A\u0648\u0646 \u0627\u0644\u0646\u0642\u064A \u0648\u0632\u064A\u062A
-      \u0627\u0644\u063A\u0627\u0631."
+      \u0627\u0644\u0633\u0646\u064A\u0646."
     startTime: 3
-    endTime: 9
-  - text: "\u0625\u0646\u0647 \u062A\u0642\u0644\u064A\u062F \u0645\u062A\u0648\u0627\u0631\u062B
-      \u0639\u0628\u0631 \u0627\u0644\u0639\u0627\u0626\u0644\u0627\u062A\u060C \u0648\u0647\u0648
-      \u0645\u0646\u062A\u062C \u0645\u0644\u064A\u0621 \u0628\u0627\u0644\u0639\u0646\u0627\u064A\u0629
-      \u0648\u0627\u0644\u062D\u0631\u0641\u064A\u0629."
-    startTime: 9
-    endTime: 14
+    endTime: 5
+  - text: "\u064A\u064F\u0633\u062A\u062E\u062F\u0645 \u0641\u064A \u0635\u0646\u0639\u0647
+      \u0632\u064A\u062A \u0627\u0644\u0632\u064A\u062A\u0648\u0646 \u0627\u0644\u0646\u0642\u064A
+      \u0648\u0632\u064A\u062A \u0627\u0644\u063A\u0627\u0631."
+    startTime: 5
+    endTime: 8
+  - text: "\u0625\u0646\u0647\u0627 \u062A\u0642\u0644\u064A\u062F \u062A\u0646\u0627\u0642\u0644\u062A\u0647
+      \u0627\u0644\u0639\u0627\u0626\u0644\u0627\u062A \u0639\u0628\u0631 \u0627\u0644\u0623\u062C\u064A\u0627\u0644."
+    startTime: 8
+    endTime: 10
+  - text: "\u0647\u0630\u0627 \u0627\u0644\u0635\u0627\u0628\u0648\u0646 \u0645\u0646\u062A\u062C
+      \u0645\u0644\u064A\u0621 \u0628\u0627\u0644\u0639\u0646\u0627\u064A\u0629 \u0648\u0627\u0644\u062D\u0631\u0641\u064A\u0629."
+    startTime: 10
+    endTime: 12
   - text: "\u0643\u0627\u0646\u062A \u0632\u0648\u062C\u062A\u064A \u062A\u0628\u064A\u0639
       \u0647\u0630\u0627 \u0627\u0644\u0635\u0627\u0628\u0648\u0646 \u0641\u064A
-      \u0645\u062A\u062C\u0631\u0647\u0627\u060C \u0648\u0644\u0645 \u064A\u062C\u0644\u0628
-      \u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0641\u0642\u0637\u060C \u0628\u0644
-      \u062C\u0644\u0628 \u0623\u064A\u0636\u064B\u0627 \u062C\u0632\u0621\u064B\u0627
-      \u0645\u0646 \u062B\u0642\u0627\u0641\u062A\u0646\u0627 \u0644\u0644\u0646\u0627\u0633
-      \u0641\u064A \u062C\u0645\u064A\u0639 \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0639\u0627\u0644\u0645."
+      \u0645\u062A\u062C\u0631\u0647\u0627."
+    startTime: 12
+    endTime: 14
+  - text: "\u0644\u0645 \u064A\u0643\u0646 \u0627\u0644\u0635\u0627\u0628\u0648\u0646
+      \u064A\u062C\u0644\u0628 \u0641\u0642\u0637 \u0627\u0644\u0646\u0638\u0627\u0641\u0629."
     startTime: 14
+    endTime: 16
+  - text: "\u0628\u0644 \u0643\u0627\u0646 \u064A\u062D\u0645\u0644 \u0642\u0637\u0639\u0629
+      \u0645\u0646 \u062B\u0642\u0627\u0641\u062A\u0646\u0627."
+    startTime: 16
+    endTime: 18
+  - text: "\u0644\u0642\u062F \u0648\u0635\u0644 \u0647\u0630\u0627 \u0627\u0644\u0635\u0627\u0628\u0648\u0646
+      \u0625\u0644\u0649 \u0627\u0644\u0646\u0627\u0633 \u0641\u064A \u062C\u0645\u064A\u0639
+      \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0639\u0627\u0644\u0645."
+    startTime: 18
     endTime: 22
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
+  StopId: 1
 --- !u!82 &-5248752376949655281
 AudioSource:
   m_ObjectHideFlags: 0

@@ -156,17 +156,29 @@ MonoBehaviour:
   - text: Oh, de beroemde zeep van Aleppo.
     startTime: 0
     endTime: 3
-  - text: Deze werd in mijn thuisland al duizenden jaren met de hand gemaakt, van
-      pure olijfolie en laurierolie.
+  - text: Deze werd in mijn thuisland al duizenden jaren met de hand gemaakt
     startTime: 3
+    endTime: 6
+  - text: van pure olijfolie en laurierolie
+    startTime: 6
     endTime: 9
-  - text: Het is een traditie die door families werd doorgegeven, een product vol
-      zorg en ambacht.
+  - text: Het is een traditie die door families werd doorgegeven
     startTime: 9
+    endTime: 12
+  - text: een product vol zorg en ambacht
+    startTime: 12
     endTime: 14
-  - text: Mijn vrouw verkocht deze zeep in haar winkel, en het bracht niet alleen
-      reinheid, maar ook een stukje van onze cultuur naar mensen over de hele wereld.
+  - text: Mijn vrouw verkocht deze zeep in haar winkel
     startTime: 14
+    endTime: 17
+  - text: en het bracht niet alleen reinheid
+    startTime: 17
+    endTime: 18
+  - text: maar ook een stukje van onze cultuur
+    startTime: 18
+    endTime: 20
+  - text: naar mensen over de hele wereld
+    startTime: 20
     endTime: 22
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
   StopId: 1
