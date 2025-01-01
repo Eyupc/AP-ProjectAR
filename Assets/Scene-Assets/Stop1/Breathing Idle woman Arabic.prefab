@@ -303,119 +303,145 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7748656462859157507}
-  audioClip: {fileID: 8300000, guid: 1a130a2d9b9bc734ea88022196d728c9, type: 3}
+  audioClip: {fileID: 8300000, guid: 9e138a4c4f41b03498743651ee7d02cb, type: 3}
   subtitlePosition: {fileID: 0}
   textHeight: 2
   subtitles:
-  - text: Hij zegt ...
+  - text: "\u064A\u064E\u0642\u064F\u0648\u0644\u0652.."
     startTime: 0
     endTime: 2
-  - text: 'Ik ben van daar, ik ben van hier '
+  - text: "\u0623\u064E\u0646\u064E\u0627 \u0645\u064E\u0646\u0652 \u0647\u064F\u0646\u064E\u0627\u0643\u0652...\u0623\u064E\u0646\u064E\u0627
+      \u0645\u064E\u0646\u0652 \u0647\u064F\u0646\u064E\u0627"
     startTime: 2
     endTime: 5
-  - text: 'En ik ben niet daar, en niet hier '
+  - text: "\u0648\u064E\u0644\u064E\u0633\u0652\u062A\u064F \u0647\u064F\u0646\u064E\u0627\u0643\u064E\u060C
+      \u0648\u064E\u0644\u064E\u0633\u0652\u062A\u064F \u0647\u064F\u0646\u064E\u0627."
     startTime: 5
-    endTime: 7
-  - text: 'Ik heb twee namen die samenkomen en uit elkaar gaan '
-    startTime: 7
-    endTime: 11
-  - text: 'Ik heb twee talen '
-    startTime: 11
-    endTime: 13
-  - text: 'Ik ben vergeten in welke ik ooit droomde. '
-    startTime: 13
+    endTime: 8
+  - text: "\u0644\u0650\u064A \u0627\u0633\u0652\u0645\u064E\u0627\u0646\u0650 \u064A\u064E\u0644\u0652\u062A\u064E\u0642\u0650\u064A\u064E\u0627\u0646\u0650
+      \u0648\u064E\u064A\u064E\u0641\u0652\u062A\u064E\u0631\u0650\u0642\u064E\u0627\u0646\u0650"
+    startTime: 8
+    endTime: 10
+  - text: "\u0644\u062F\u064A \u0644\u063A\u062A\u0627\u0646."
+    startTime: 10
+    endTime: 12
+  - text: "\u0644\u0642\u062F \u0646\u0633\u064A\u062A \u0628\u0623\u064A \u0644\u063A\u0629
+      \u062D\u0644\u0645\u062A \u0645\u0646 \u0642\u0628\u0644."
+    startTime: 12
+    endTime: 14
+  - text: "\u0644\u062F\u064A \u0644\u063A\u0629 \u0645\u0643\u062A\u0648\u0628\u0629\u060C
+      \u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629\u060C \u0627\u0644\u062A\u064A
+      \u0623\u0645\u0644\u0643 \u0643\u0644\u0645\u0627\u062A\u0647\u0627 \u062A\u062D\u062A
+      \u062A\u0635\u0631\u0641\u064A."
+    startTime: 14
     endTime: 17
-  - text: Ik heb een gescreven taal, een Engelse, waarvan de woorden tot mijn beschikking
-      staan.
+  - text: "\u0648\u0623\u062E\u0631\u0649\u060C \u0645\u0633\u062A\u0645\u062F\u0629
+      \u0645\u0646 \u0627\u0644\u062D\u0648\u0627\u0631 \u0627\u0644\u0633\u0645\u0627\u0648\u064A
+      \u0645\u0639 \u0627\u0644\u0642\u062F\u0633."
     startTime: 17
+    endTime: 20
+  - text: "\u0628\u0644\u0647\u062C\u0629 \u0641\u0636\u064A\u0629\u060C"
+    startTime: 20
+    endTime: 21
+  - text: "\u0648\u0644\u0643\u0646\u0647\u0627 \u0644\u0627 \u062A\u0637\u064A\u0639
+      \u062E\u064A\u0627\u0644\u064A."
+    startTime: 21
     endTime: 23
-  - text: En een andere, afkomstig uit de hemelse dialoog met Jeruzalem.
+  - text: "\u0648\u0645\u0627\u0630\u0627 \u0639\u0646 \u0627\u0644\u0647\u0648\u064A\u0629\u061F
+      \u0633\u0623\u0644\u062A."
     startTime: 23
-    endTime: 28
-  - text: Met een zilveren accent,
-    startTime: 28
+    endTime: 25
+  - text: "\u0642\u0627\u0644 : \u0627\u0644\u062F\u0641\u0627\u0639 \u0639\u0646
+      \u0627\u0644\u0646\u0641\u0633..."
+    startTime: 25
+    endTime: 27
+  - text: "\u0627\u0644\u0647\u0648\u064A\u0629 \u0647\u064A \u0627\u0628\u0646\u0629
+      \u0627\u0644\u0648\u0644\u0627\u062F\u0629."
+    startTime: 27
+    endTime: 29
+  - text: "\u0648\u0644\u0643\u0646 \u0641\u064A \u0627\u0644\u0646\u0647\u0627\u064A\u0629
+      \u0647\u0648 \u0627\u0644\u062E\u0644\u0642."
+    startTime: 29
     endTime: 31
-  - text: Maar het gehoorzaamt niet aan mijn verbeelding.
+  - text: "\u0645\u0646 \u0635\u0627\u062D\u0628\u0647\u0627."
     startTime: 31
+    endTime: 33
+  - text: "\u0644\u064A\u0633 \u0645\u064A\u0631\u0627\u062B \u0627\u0644\u0645\u0627\u0636\u064A."
+    startTime: 33
     endTime: 35
-  - text: En de  identiteit ? vroeg ik.
+  - text: "\u0644\u062F\u064A \u0627\u0644\u062C\u0645\u0639."
     startTime: 35
-    endTime: 38
-  - text: 'Hij zei: zelfverdediging...'
-    startTime: 38
-    endTime: 41
-  - text: Identiteit is de dochter van geboorte.
-    startTime: 41
+    endTime: 36
+  - text: "\u0641\u064A \u062F\u0627\u062E\u0644\u064A \u064A\u0639\u064A\u0634 \u0645\u0638\u0647\u0631\u064A
+      \u0627\u0644\u0645\u062A\u062C\u062F\u062F \u0628\u0627\u0633\u062A\u0645\u0631\u0627\u0631.
+      \u0648\u0644\u0643\u0646\u0646\u064A \u0623\u0646\u062A\u0645\u064A \u0625\u0644\u0649
+      \u0645\u0633\u0623\u0644\u0629 \u0627\u0644\u0636\u062D\u064A\u0629."
+    startTime: 36
+    endTime: 40
+  - text: "\u0644\u0648 \u0644\u0645 \u0623\u0643\u0646 \u0645\u0646 \u0647\u0646\u0627\u0643\u060C"
+    startTime: 40
+    endTime: 42
+  - text: "\u062B\u0645 \u0643\u0646\u062A \u0642\u062F \u062F\u0631\u0628\u062A
+      \u0642\u0644\u0628\u064A"
+    startTime: 42
     endTime: 44
-  - text: Maar uiteindelijk is het de creatie.
+  - text: "\u0644\u0631\u0641\u0639 \u063A\u0632\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0639\u0627\u0631\u0629
+      \u0647\u0646\u0627\u0643."
     startTime: 44
+    endTime: 46
+  - text: "\u0644\u0630\u0627\u060C \u0627\u062D\u0645\u0644 \u0648\u0637\u0646\u0643
+      \u0645\u0639\u0643 \u0623\u064A\u0646\u0645\u0627 \u0630\u0647\u0628\u062A."
+    startTime: 46
     endTime: 48
-  - text: Van haar eigenaar.
+  - text: "\u0648\u0643\u0646 \u0646\u0631\u062C\u0633\u064A\u064B\u0627 \u0625\u0630\u0627
+      \u0644\u0632\u0645 \u0627\u0644\u0623\u0645\u0631."
     startTime: 48
-    endTime: 49
-  - text: Niet het erven van een verleden.
-    startTime: 49
-    endTime: 53
-  - text: Ik heb het meervoudige.
-    startTime: 53
-    endTime: 55
-  - text: Binnenin mij huist mijn steeds vernieuwende buitenkant. Maar ik behoor
-      tot de vraag van het slachtoffer.
-    startTime: 55
+    endTime: 50
+  - text: "\u0627\u0644\u0645\u0646\u0641\u0649 \u0647\u0648 \u0627\u0644\u0639\u0627\u0644\u0645
+      \u0627\u0644\u062E\u0627\u0631\u062C\u064A."
+    startTime: 50
+    endTime: 52
+  - text: "\u0627\u0644\u0645\u0646\u0641\u0649 \u0647\u0648 \u0627\u0644\u0639\u0627\u0644\u0645
+      \u0627\u0644\u062F\u0627\u062E\u0644\u064A."
+    startTime: 52
+    endTime: 54
+  - text: "\u0641\u0645\u0646 \u0623\u0646\u062A \u0628\u064A\u0646\u0647\u0645\u061F"
+    startTime: 54
+    endTime: 56
+  - text: "\u0623\u0646\u0627 \u0644\u0627 \u0623\u0639\u0631\u0641 \u0646\u0641\u0633\u064A\u060C
+      \u062D\u062A\u0649 \u0644\u0627 \u0623\u0641\u0642\u062F\u0647\u0627."
+    startTime: 56
+    endTime: 58
+  - text: "\u0648\u0623\u0646\u0627 \u0645\u0646 \u0623\u0646\u0627."
+    startTime: 58
+    endTime: 59
+  - text: "\u0623\u0646\u0627 \u0630\u0627\u062A\u064A \u0627\u0644\u0623\u062E\u0631\u0649
+      \u0641\u064A \u062B\u0646\u0627\u0626\u064A\u0629"
+    startTime: 59
+    endTime: 60
+  - text: "\u064A\u0645\u0632\u062C \u0628\u064A\u0646 \u0627\u0644\u0644\u063A\u0629
+      \u0648\u0627\u0644\u0645\u0631\u062C\u0639."
+    startTime: 60
     endTime: 62
-  - text: Had ik niet van daar geweest,
+  - text: "\u0644\u0648 \u0643\u062A\u0628\u062A \u0627\u0644\u0634\u0639\u0631 \u0644\u0642\u0644\u062A:"
     startTime: 62
-    endTime: 65
-  - text: dan had ik mijn hart getraind
-    startTime: 65
+    endTime: 64
+  - text: "\u0623\u0646\u0627 \u0627\u062B\u0646\u0627\u0646 \u0641\u064A \u0648\u0627\u062D\u062F."
+    startTime: 64
+    endTime: 66
+  - text: "\u0645\u062B\u0644 \u062C\u0646\u0627\u062D\u064A \u0627\u0644\u0633\u0646\u0648\u0646\u0648."
+    startTime: 66
     endTime: 68
-  - text: om daar de gazelle van de metafoor groot te brengen.
+  - text: "\u0625\u0630\u0627 \u062C\u0627\u0621 \u0627\u0644\u0631\u0628\u064A\u0639
+      \u0645\u062A\u0623\u062E\u0631\u0627\u060C"
     startTime: 68
-    endTime: 72
-  - text: Dus, draag je land waar je ook gaat
-    startTime: 72
-    endTime: 75
-  - text: En wees een narcist, als dat nodig is.
-    startTime: 75
-    endTime: 78
-  - text: Ballingschap is de buitenwereld.
-    startTime: 78
-    endTime: 81
-  - text: Ballingschap is de innerlijke wereld.
-    startTime: 81
-    endTime: 84
-  - text: Dus, wie ben jij tussen hen in?
-    startTime: 84
-    endTime: 87
-  - text: Ik definieer mezelf niet, opdat ik het niet verlies.
-    startTime: 87
-    endTime: 91
-  - text: En ik ben wie ik ben.
-    startTime: 91
-    endTime: 93
-  - text: Ik ben mijn andere zelf in een dualiteit die
-    startTime: 93
-    endTime: 97
-  - text: zich vermengt tussen taal en verwijzing.
-    startTime: 97
-    endTime: 100
-  - text: "Had ik po\xEBzie geschreven, zou ik hebben gezegd:"
-    startTime: 100
-    endTime: 104
-  - text: "Ik ben twee in \xE9\xE9n."
-    startTime: 104
-    endTime: 107
-  - text: Zoals de twee vleugels van een zwaluw.
-    startTime: 107
-    endTime: 110
-  - text: Als de lente laat zou komen,
-    startTime: 110
-    endTime: 113
-  - text: Zou ik tevreden zijn
-    startTime: 113
-    endTime: 116
-  - text: om de goede tijding te brengen.
-    startTime: 116
-    endTime: 120
+    endTime: 70
+  - text: "\u0647\u0644 \u0633\u0623\u0643\u0648\u0646 \u0631\u0627\u0636\u064A\u0627\u061F"
+    startTime: 70
+    endTime: 71
+  - text: "\u0644\u0625\u062D\u0636\u0627\u0631 \u0627\u0644\u0623\u062E\u0628\u0627\u0631
+      \u0627\u0644\u062C\u064A\u062F\u0629."
+    startTime: 71
+    endTime: 73
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
   StopId: 1
