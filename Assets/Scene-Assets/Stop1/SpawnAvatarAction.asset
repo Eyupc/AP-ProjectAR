@@ -16,5 +16,9 @@ MonoBehaviour:
     type: 3}
   avatarArabicPrefab: {fileID: 3561998431760403027, guid: c00f07c15ee7d44489ee31b13c670763,
     type: 3}
+  avatarWomanPrefab: {fileID: 8567635787126344321, guid: 2d8667a1da6fc0e458664ebf91c07aba,
+    type: 3}
+  avatarArabicWomanPrefab: {fileID: 8567635787126344321, guid: 7522d889375794a4fb19242090bc115d,
+    type: 3}
   welcomeOverlayPrefab: {fileID: 7080766145719088569, guid: 99526aed8dffc4422955015caab09ad1,
     type: 3}

@@ -84,19 +84,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -392295764560968697}
+      addedObject: {fileID: 6228186796199572600}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2445116970128969395}
+      addedObject: {fileID: 7748656462859157507}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4698748365570032293}
+      addedObject: {fileID: 1602371019964034008}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2370497178378861327}
+      addedObject: {fileID: 5714770404724570778}
   m_SourcePrefab: {fileID: 100100000, guid: 3512e115e550cf04f9a0f2c73abd2bbe, type: 3}
 --- !u!1 &8567635787126344321 stripped
 GameObject:
@@ -125,7 +125,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-392295764560968697
+--- !u!114 &6228186796199572600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbd3dd790c670243864b161372361b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: -4698748365570032293}
+  audioSource: {fileID: 7748656462859157507}
   audioClip: {fileID: 8300000, guid: b686aa1ad0a596c4cb775830604e1632, type: 3}
   subtitlePosition: {fileID: 0}
   textHeight: 2
@@ -153,146 +153,17 @@ MonoBehaviour:
     endTime: 7
   - text: om onze verhalen te delen
     startTime: 7
-    endTime: 8
+    endTime: 9
   - text: ' zowel van vreugde als van verdriet'
-    startTime: 8
-    endTime: 10
+    startTime: 9
+    endTime: 11
   - text: "Wist je dat Syri\xEB een rijke traditie heeft in po\xEBzie?"
-    startTime: 10
-    endTime: 14
+    startTime: 11
+    endTime: 15
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
   prefabToShow: {fileID: 7080766145719088569, guid: 68d278b519dff0849ac32b284020090c,
     type: 3}
---- !u!114 &-2445116970128969395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8567635787126344321}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc6d0f6872e5f4c4cbeba701b11669d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: -4698748365570032293}
-  audioClip: {fileID: 8300000, guid: 1a130a2d9b9bc734ea88022196d728c9, type: 3}
-  subtitlePosition: {fileID: 0}
-  textHeight: 2
-  subtitles:
-  - text: Hij zegt ...
-    startTime: 0
-    endTime: 2
-  - text: 'Ik ben van daar, ik ben van hier '
-    startTime: 2
-    endTime: 4
-  - text: 'En ik ben niet daar, en niet hier '
-    startTime: 5
-    endTime: 7
-  - text: 'Ik heb twee namen die samenkomen en uit elkaar gaan '
-    startTime: 7
-    endTime: 11
-  - text: 'Ik heb twee talen '
-    startTime: 11
-    endTime: 13
-  - text: 'Ik ben vergeten in welke ik ooit droomde. '
-    startTime: 13
-    endTime: 15
-  - text: Ik heb een gescreven taal, een Engelse, waarvan de woorden tot mijn beschikking
-      staan.
-    startTime: 15
-    endTime: 20
-  - text: En een andere, afkomstig uit de hemelse dialoog met Jeruzalem.
-    startTime: 20
-    endTime: 25
-  - text: Met een zilveren accent,
-    startTime: 25
-    endTime: 27
-  - text: Maar het gehoorzaamt niet aan mijn verbeelding.
-    startTime: 27
-    endTime: 30
-  - text: En de  identiteit ? vroeg ik.
-    startTime: 30
-    endTime: 32
-  - text: 'Hij zei: zelfverdediging...'
-    startTime: 32
-    endTime: 35
-  - text: Identiteit is de dochter van geboorte.
-    startTime: 35
-    endTime: 38
-  - text: Maar uiteindelijk is het de creatie.
-    startTime: 38
-    endTime: 40
-  - text: Van haar eigenaar.
-    startTime: 41
-    endTime: 42
-  - text: Niet het erven van een verleden.
-    startTime: 42
-    endTime: 44
-  - text: Ik heb het meervoudige.
-    startTime: 44
-    endTime: 46
-  - text: Binnenin mij huist mijn steeds vernieuwende buitenkant. Maar ik behoor
-      tot de vraag van het slachtoffer.
-    startTime: 46
-    endTime: 53
-  - text: Had ik niet van daar geweest,
-    startTime: 53
-    endTime: 55
-  - text: dan had ik mijn hart getraind
-    startTime: 55
-    endTime: 56
-  - text: om daar de gazelle van de metafoor groot te brengen.
-    startTime: 56
-    endTime: 60
-  - text: Dus, draag je land waar je ook gaat
-    startTime: 60
-    endTime: 63
-  - text: En wees een narcist, als dat nodig is.
-    startTime: 63
-    endTime: 66
-  - text: Ballingschap is de buitenwereld.
-    startTime: 67
-    endTime: 69
-  - text: Ballingschap is de innerlijke wereld.
-    startTime: 69
-    endTime: 72
-  - text: Dus, wie ben jij tussen hen in?
-    startTime: 73
-    endTime: 75
-  - text: Ik definieer mezelf niet, opdat ik het niet verlies.
-    startTime: 75
-    endTime: 78
-  - text: En ik ben wie ik ben.
-    startTime: 79
-    endTime: 80
-  - text: Ik ben mijn andere zelf in een dualiteit die
-    startTime: 80
-    endTime: 84
-  - text: zich vermengt tussen taal en verwijzing.
-    startTime: 84
-    endTime: 87
-  - text: "Had ik po\xEBzie geschreven, zou ik hebben gezegd:"
-    startTime: 87
-    endTime: 90
-  - text: "Ik ben twee in \xE9\xE9n."
-    startTime: 90
-    endTime: 92
-  - text: Zoals de twee vleugels van een zwaluw.
-    startTime: 92
-    endTime: 95
-  - text: Als de lente laat zou komen,
-    startTime: 95
-    endTime: 98
-  - text: Zou ik tevreden zijn
-    startTime: 98
-    endTime: 99
-  - text: om de goede tijding te brengen.
-    startTime: 99
-    endTime: 102
-  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
-  StopId: 1
---- !u!82 &-4698748365570032293
+--- !u!82 &7748656462859157507
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,8 +173,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1a130a2d9b9bc734ea88022196d728c9, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 912b04df32e224cc9a81d093468979c6, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -388,7 +259,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &2370497178378861327
+--- !u!65 &1602371019964034008
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -407,5 +278,134 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.0445569, z: 1}
-  m_Center: {x: 0, y: 0.9264842, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5714770404724570778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567635787126344321}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6d0f6872e5f4c4cbeba701b11669d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 7748656462859157507}
+  audioClip: {fileID: 8300000, guid: 1a130a2d9b9bc734ea88022196d728c9, type: 3}
+  subtitlePosition: {fileID: 0}
+  textHeight: 2
+  subtitles:
+  - text: Hij zegt ...
+    startTime: 0
+    endTime: 2
+  - text: 'Ik ben van daar, ik ben van hier '
+    startTime: 2
+    endTime: 5
+  - text: 'En ik ben niet daar, en niet hier '
+    startTime: 5
+    endTime: 7
+  - text: 'Ik heb twee namen die samenkomen en uit elkaar gaan '
+    startTime: 7
+    endTime: 11
+  - text: 'Ik heb twee talen '
+    startTime: 11
+    endTime: 13
+  - text: 'Ik ben vergeten in welke ik ooit droomde. '
+    startTime: 13
+    endTime: 17
+  - text: Ik heb een gescreven taal, een Engelse, waarvan de woorden tot mijn beschikking
+      staan.
+    startTime: 17
+    endTime: 23
+  - text: En een andere, afkomstig uit de hemelse dialoog met Jeruzalem.
+    startTime: 23
+    endTime: 28
+  - text: Met een zilveren accent,
+    startTime: 28
+    endTime: 31
+  - text: Maar het gehoorzaamt niet aan mijn verbeelding.
+    startTime: 31
+    endTime: 35
+  - text: En de  identiteit ? vroeg ik.
+    startTime: 35
+    endTime: 38
+  - text: 'Hij zei: zelfverdediging...'
+    startTime: 38
+    endTime: 41
+  - text: Identiteit is de dochter van geboorte.
+    startTime: 41
+    endTime: 44
+  - text: Maar uiteindelijk is het de creatie.
+    startTime: 44
+    endTime: 48
+  - text: Van haar eigenaar.
+    startTime: 48
+    endTime: 49
+  - text: Niet het erven van een verleden.
+    startTime: 49
+    endTime: 53
+  - text: Ik heb het meervoudige.
+    startTime: 53
+    endTime: 55
+  - text: Binnenin mij huist mijn steeds vernieuwende buitenkant. Maar ik behoor
+      tot de vraag van het slachtoffer.
+    startTime: 55
+    endTime: 62
+  - text: Had ik niet van daar geweest,
+    startTime: 62
+    endTime: 65
+  - text: dan had ik mijn hart getraind
+    startTime: 65
+    endTime: 68
+  - text: om daar de gazelle van de metafoor groot te brengen.
+    startTime: 68
+    endTime: 72
+  - text: Dus, draag je land waar je ook gaat
+    startTime: 72
+    endTime: 75
+  - text: En wees een narcist, als dat nodig is.
+    startTime: 75
+    endTime: 78
+  - text: Ballingschap is de buitenwereld.
+    startTime: 78
+    endTime: 81
+  - text: Ballingschap is de innerlijke wereld.
+    startTime: 81
+    endTime: 84
+  - text: Dus, wie ben jij tussen hen in?
+    startTime: 84
+    endTime: 87
+  - text: Ik definieer mezelf niet, opdat ik het niet verlies.
+    startTime: 87
+    endTime: 91
+  - text: En ik ben wie ik ben.
+    startTime: 91
+    endTime: 93
+  - text: Ik ben mijn andere zelf in een dualiteit die
+    startTime: 93
+    endTime: 97
+  - text: zich vermengt tussen taal en verwijzing.
+    startTime: 97
+    endTime: 100
+  - text: "Had ik po\xEBzie geschreven, zou ik hebben gezegd:"
+    startTime: 100
+    endTime: 104
+  - text: "Ik ben twee in \xE9\xE9n."
+    startTime: 104
+    endTime: 107
+  - text: Zoals de twee vleugels van een zwaluw.
+    startTime: 107
+    endTime: 110
+  - text: Als de lente laat zou komen,
+    startTime: 110
+    endTime: 113
+  - text: Zou ik tevreden zijn
+    startTime: 113
+    endTime: 116
+  - text: om de goede tijding te brengen.
+    startTime: 116
+    endTime: 120
+  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
+  StopId: 1

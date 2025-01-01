@@ -84,19 +84,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6768093505811497967}
+      addedObject: {fileID: 6228186796199572600}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -6574833391495878843}
+      addedObject: {fileID: 7748656462859157507}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4698748365570032293}
+      addedObject: {fileID: 1602371019964034008}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2370497178378861327}
+      addedObject: {fileID: 5714770404724570778}
   m_SourcePrefab: {fileID: 100100000, guid: 3512e115e550cf04f9a0f2c73abd2bbe, type: 3}
 --- !u!1 &8567635787126344321 stripped
 GameObject:
@@ -125,7 +125,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6768093505811497967
+--- !u!114 &6228186796199572600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,181 +137,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbd3dd790c670243864b161372361b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: -4698748365570032293}
+  audioSource: {fileID: 7748656462859157507}
   audioClip: {fileID: 8300000, guid: e047c445f7ea65f48879dae64d4b13b9, type: 3}
   subtitlePosition: {fileID: 0}
   textHeight: 2
   subtitles:
-  - text: "Po\xEBzie is een manier om gevoelens te uiten die niet altijd in woorden
-      passen."
+  - text: "\u0627\u0644\u0634\u0639\u0631 \u0647\u0648 \u0648\u0633\u064A\u0644\u0629
+      \u0644\u0644\u062A\u0639\u0628\u064A\u0631 \u0639\u0646 \u0627\u0644\u0645\u0634\u0627\u0639\u0631"
     startTime: 0
-    endTime: 4
-  - text: "In Syri\xEB wordt po\xEBzie vaak gebruikt om onze verhalen te delen, zowel
-      van vreugde als van verdriet."
-    startTime: 0
-    endTime: 10
-  - text: "Wist je dat Syri\xEB een rijke traditie heeft in po\xEBzie?"
-    startTime: 0
-    endTime: 14
+    endTime: 3
+  - text: "\u0627\u0644\u062A\u064A \u0644\u0627 \u064A\u0645\u0643\u0646 \u062F\u0627\u0626\u0645\u064B\u0627
+      \u0627\u0644\u062A\u0639\u0628\u064A\u0631 \u0639\u0646\u0647\u0627 \u0628\u0627\u0644\u0643\u0644\u0645\u0627\u062A.  "
+    startTime: 3
+    endTime: 5
+  - text: "\u0641\u064A \u0633\u0648\u0631\u064A\u0627\u060C \u064A\u064F\u0633\u062A\u062E\u062F\u0645
+      \u0627\u0644\u0634\u0639\u0631 \u063A\u0627\u0644\u0628\u064B\u0627 "
+    startTime: 5
+    endTime: 7
+  - text: "\u0644\u0645\u0634\u0627\u0631\u0643\u0629 \u0642\u0635\u0635\u0646\u0627.  "
+    startTime: 7
+    endTime: 9
+  - text: "\u0633\u0648\u0627\u0621 \u0643\u0627\u0646\u062A \u0639\u0646 \u0627\u0644\u0641\u0631\u062D"
+    startTime: 9
+    endTime: 11
+  - text: "\u0623\u0648 \u0627\u0644\u062D\u0632\u0646."
+    startTime: 11
+    endTime: 15
+  - text: "\u0647\u0644 \u062A\u0639\u0644\u0645 \u0623\u0646 \u0633\u0648\u0631\u064A\u0627
+      \u062A\u062A\u0645\u062A\u0639"
+    startTime: 11
+    endTime: 15
+  - text: "\u0628\u062A\u0642\u0644\u064A\u062F \u063A\u0646\u064A \u0641\u064A \u0627\u0644\u0634\u0639\u0631\u061F"
+    startTime: 11
+    endTime: 15
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
   prefabToShow: {fileID: 7080766145719088569, guid: 244f6df18c24f854ea165e639caaa81b,
     type: 3}
---- !u!114 &-6574833391495878843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8567635787126344321}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc6d0f6872e5f4c4cbeba701b11669d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: -4698748365570032293}
-  audioClip: {fileID: 8300000, guid: 912b04df32e224cc9a81d093468979c6, type: 3}
-  subtitlePosition: {fileID: 0}
-  textHeight: 2
-  subtitles:
-  - text: "\u064A\u064E\u0642\u064F\u0648\u0644\u0652.."
-    startTime: 0
-    endTime: 1
-  - text: "\u0623\u064E\u0646\u064E\u0627 \u0645\u064E\u0646\u0652 \u0647\u064F\u0646\u064E\u0627\u0643\u0652...\u0623\u064E\u0646\u064E\u0627
-      \u0645\u064E\u0646\u0652 \u0647\u064F\u0646\u064E\u0627"
-    startTime: 1
-    endTime: 2
-  - text: "\u0648\u064E\u0644\u064E\u0633\u0652\u062A\u064F \u0647\u064F\u0646\u064E\u0627\u0643\u064E\u060C
-      \u0648\u064E\u0644\u064E\u0633\u0652\u062A\u064F \u0647\u064F\u0646\u064E\u0627."
-    startTime: 2
-    endTime: 3
-  - text: "\u0644\u0650\u064A \u0627\u0633\u0652\u0645\u064E\u0627\u0646\u0650 \u064A\u064E\u0644\u0652\u062A\u064E\u0642\u0650\u064A\u064E\u0627\u0646\u0650
-      \u0648\u064E\u064A\u064E\u0641\u0652\u062A\u064E\u0631\u0650\u0642\u064E\u0627\u0646\u0650"
-    startTime: 3
-    endTime: 4
-  - text: "\u0644\u062F\u064A \u0644\u063A\u062A\u0627\u0646."
-    startTime: 4
-    endTime: 5
-  - text: "\u0644\u0642\u062F \u0646\u0633\u064A\u062A \u0628\u0623\u064A \u0644\u063A\u0629
-      \u062D\u0644\u0645\u062A \u0645\u0646 \u0642\u0628\u0644."
-    startTime: 5
-    endTime: 6
-  - text: "\u0644\u062F\u064A \u0644\u063A\u0629 \u0645\u0643\u062A\u0648\u0628\u0629\u060C
-      \u0627\u0644\u0625\u0646\u062C\u0644\u064A\u0632\u064A\u0629\u060C \u0627\u0644\u062A\u064A
-      \u0623\u0645\u0644\u0643 \u0643\u0644\u0645\u0627\u062A\u0647\u0627 \u062A\u062D\u062A
-      \u062A\u0635\u0631\u0641\u064A."
-    startTime: 6
-    endTime: 8
-  - text: "\u0648\u0623\u062E\u0631\u0649\u060C \u0645\u0633\u062A\u0645\u062F\u0629
-      \u0645\u0646 \u0627\u0644\u062D\u0648\u0627\u0631 \u0627\u0644\u0633\u0645\u0627\u0648\u064A
-      \u0645\u0639 \u0627\u0644\u0642\u062F\u0633."
-    startTime: 8
-    endTime: 9
-  - text: "\u0628\u0644\u0647\u062C\u0629 \u0641\u0636\u064A\u0629\u060C"
-    startTime: 9
-    endTime: 10
-  - text: "\u0648\u0644\u0643\u0646\u0647\u0627 \u0644\u0627 \u062A\u0637\u064A\u0639
-      \u062E\u064A\u0627\u0644\u064A."
-    startTime: 10
-    endTime: 11
-  - text: "\u0648\u0645\u0627\u0630\u0627 \u0639\u0646 \u0627\u0644\u0647\u0648\u064A\u0629\u061F
-      \u0633\u0623\u0644\u062A."
-    startTime: 11
-    endTime: 12
-  - text: "\u0642\u0627\u0644 : \u0627\u0644\u062F\u0641\u0627\u0639 \u0639\u0646
-      \u0627\u0644\u0646\u0641\u0633..."
-    startTime: 12
-    endTime: 13
-  - text: "\u0627\u0644\u0647\u0648\u064A\u0629 \u0647\u064A \u0627\u0628\u0646\u0629
-      \u0627\u0644\u0648\u0644\u0627\u062F\u0629."
-    startTime: 13
-    endTime: 14
-  - text: "\u0648\u0644\u0643\u0646 \u0641\u064A \u0627\u0644\u0646\u0647\u0627\u064A\u0629
-      \u0647\u0648 \u0627\u0644\u062E\u0644\u0642."
-    startTime: 14
-    endTime: 15
-  - text: "\u0645\u0646 \u0635\u0627\u062D\u0628\u0647\u0627."
-    startTime: 15
-    endTime: 16
-  - text: "\u0644\u064A\u0633 \u0645\u064A\u0631\u0627\u062B \u0627\u0644\u0645\u0627\u0636\u064A."
-    startTime: 16
-    endTime: 17
-  - text: "\u0644\u062F\u064A \u0627\u0644\u062C\u0645\u0639."
-    startTime: 17
-    endTime: 18
-  - text: "\u0641\u064A \u062F\u0627\u062E\u0644\u064A \u064A\u0639\u064A\u0634 \u0645\u0638\u0647\u0631\u064A
-      \u0627\u0644\u0645\u062A\u062C\u062F\u062F \u0628\u0627\u0633\u062A\u0645\u0631\u0627\u0631.
-      \u0648\u0644\u0643\u0646\u0646\u064A \u0623\u0646\u062A\u0645\u064A \u0625\u0644\u0649
-      \u0645\u0633\u0623\u0644\u0629 \u0627\u0644\u0636\u062D\u064A\u0629."
-    startTime: 18
-    endTime: 20
-  - text: "\u0644\u0648 \u0644\u0645 \u0623\u0643\u0646 \u0645\u0646 \u0647\u0646\u0627\u0643\u060C"
-    startTime: 20
-    endTime: 21
-  - text: "\u062B\u0645 \u0643\u0646\u062A \u0642\u062F \u062F\u0631\u0628\u062A
-      \u0642\u0644\u0628\u064A"
-    startTime: 21
-    endTime: 22
-  - text: "\u0644\u0631\u0641\u0639 \u063A\u0632\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0639\u0627\u0631\u0629
-      \u0647\u0646\u0627\u0643."
-    startTime: 22
-    endTime: 23
-  - text: "\u0644\u0630\u0627\u060C \u0627\u062D\u0645\u0644 \u0648\u0637\u0646\u0643
-      \u0645\u0639\u0643 \u0623\u064A\u0646\u0645\u0627 \u0630\u0647\u0628\u062A."
-    startTime: 23
-    endTime: 24
-  - text: "\u0648\u0643\u0646 \u0646\u0631\u062C\u0633\u064A\u064B\u0627 \u0625\u0630\u0627
-      \u0644\u0632\u0645 \u0627\u0644\u0623\u0645\u0631."
-    startTime: 24
-    endTime: 25
-  - text: "\u0627\u0644\u0645\u0646\u0641\u0649 \u0647\u0648 \u0627\u0644\u0639\u0627\u0644\u0645
-      \u0627\u0644\u062E\u0627\u0631\u062C\u064A."
-    startTime: 25
-    endTime: 26
-  - text: "\u0627\u0644\u0645\u0646\u0641\u0649 \u0647\u0648 \u0627\u0644\u0639\u0627\u0644\u0645
-      \u0627\u0644\u062F\u0627\u062E\u0644\u064A."
-    startTime: 26
-    endTime: 27
-  - text: "\u0641\u0645\u0646 \u0623\u0646\u062A \u0628\u064A\u0646\u0647\u0645\u061F"
-    startTime: 27
-    endTime: 28
-  - text: "\u0623\u0646\u0627 \u0644\u0627 \u0623\u0639\u0631\u0641 \u0646\u0641\u0633\u064A\u060C
-      \u062D\u062A\u0649 \u0644\u0627 \u0623\u0641\u0642\u062F\u0647\u0627."
-    startTime: 28
-    endTime: 29
-  - text: "\u0648\u0623\u0646\u0627 \u0645\u0646 \u0623\u0646\u0627."
-    startTime: 29
-    endTime: 30
-  - text: "\u0623\u0646\u0627 \u0630\u0627\u062A\u064A \u0627\u0644\u0623\u062E\u0631\u0649
-      \u0641\u064A \u062B\u0646\u0627\u0626\u064A\u0629"
-    startTime: 30
-    endTime: 31
-  - text: "\u064A\u0645\u0632\u062C \u0628\u064A\u0646 \u0627\u0644\u0644\u063A\u0629
-      \u0648\u0627\u0644\u0645\u0631\u062C\u0639."
-    startTime: 31
-    endTime: 32
-  - text: "\u0644\u0648 \u0643\u062A\u0628\u062A \u0627\u0644\u0634\u0639\u0631 \u0644\u0642\u0644\u062A:"
-    startTime: 32
-    endTime: 33
-  - text: "\u0623\u0646\u0627 \u0627\u062B\u0646\u0627\u0646 \u0641\u064A \u0648\u0627\u062D\u062F."
-    startTime: 33
-    endTime: 34
-  - text: "\u0645\u062B\u0644 \u062C\u0646\u0627\u062D\u064A \u0627\u0644\u0633\u0646\u0648\u0646\u0648."
-    startTime: 34
-    endTime: 35
-  - text: "\u0625\u0630\u0627 \u062C\u0627\u0621 \u0627\u0644\u0631\u0628\u064A\u0639
-      \u0645\u062A\u0623\u062E\u0631\u0627\u060C"
-    startTime: 35
-    endTime: 36
-  - text: "\u0647\u0644 \u0633\u0623\u0643\u0648\u0646 \u0631\u0627\u0636\u064A\u0627\u061F"
-    startTime: 36
-    endTime: 38
-  - text: "\u0644\u0625\u062D\u0636\u0627\u0631 \u0627\u0644\u0623\u062E\u0628\u0627\u0631
-      \u0627\u0644\u062C\u064A\u062F\u0629."
-    startTime: 38
-    endTime: 39
-  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
-  StopId: 1
---- !u!82 &-4698748365570032293
+--- !u!82 &7748656462859157507
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,8 +183,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b686aa1ad0a596c4cb775830604e1632, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 912b04df32e224cc9a81d093468979c6, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -407,7 +269,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &2370497178378861327
+--- !u!65 &1602371019964034008
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,5 +288,134 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.0445569, z: 1}
-  m_Center: {x: 0, y: 0.9264842, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5714770404724570778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567635787126344321}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6d0f6872e5f4c4cbeba701b11669d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 7748656462859157507}
+  audioClip: {fileID: 8300000, guid: 1a130a2d9b9bc734ea88022196d728c9, type: 3}
+  subtitlePosition: {fileID: 0}
+  textHeight: 2
+  subtitles:
+  - text: Hij zegt ...
+    startTime: 0
+    endTime: 2
+  - text: 'Ik ben van daar, ik ben van hier '
+    startTime: 2
+    endTime: 5
+  - text: 'En ik ben niet daar, en niet hier '
+    startTime: 5
+    endTime: 7
+  - text: 'Ik heb twee namen die samenkomen en uit elkaar gaan '
+    startTime: 7
+    endTime: 11
+  - text: 'Ik heb twee talen '
+    startTime: 11
+    endTime: 13
+  - text: 'Ik ben vergeten in welke ik ooit droomde. '
+    startTime: 13
+    endTime: 17
+  - text: Ik heb een gescreven taal, een Engelse, waarvan de woorden tot mijn beschikking
+      staan.
+    startTime: 17
+    endTime: 23
+  - text: En een andere, afkomstig uit de hemelse dialoog met Jeruzalem.
+    startTime: 23
+    endTime: 28
+  - text: Met een zilveren accent,
+    startTime: 28
+    endTime: 31
+  - text: Maar het gehoorzaamt niet aan mijn verbeelding.
+    startTime: 31
+    endTime: 35
+  - text: En de  identiteit ? vroeg ik.
+    startTime: 35
+    endTime: 38
+  - text: 'Hij zei: zelfverdediging...'
+    startTime: 38
+    endTime: 41
+  - text: Identiteit is de dochter van geboorte.
+    startTime: 41
+    endTime: 44
+  - text: Maar uiteindelijk is het de creatie.
+    startTime: 44
+    endTime: 48
+  - text: Van haar eigenaar.
+    startTime: 48
+    endTime: 49
+  - text: Niet het erven van een verleden.
+    startTime: 49
+    endTime: 53
+  - text: Ik heb het meervoudige.
+    startTime: 53
+    endTime: 55
+  - text: Binnenin mij huist mijn steeds vernieuwende buitenkant. Maar ik behoor
+      tot de vraag van het slachtoffer.
+    startTime: 55
+    endTime: 62
+  - text: Had ik niet van daar geweest,
+    startTime: 62
+    endTime: 65
+  - text: dan had ik mijn hart getraind
+    startTime: 65
+    endTime: 68
+  - text: om daar de gazelle van de metafoor groot te brengen.
+    startTime: 68
+    endTime: 72
+  - text: Dus, draag je land waar je ook gaat
+    startTime: 72
+    endTime: 75
+  - text: En wees een narcist, als dat nodig is.
+    startTime: 75
+    endTime: 78
+  - text: Ballingschap is de buitenwereld.
+    startTime: 78
+    endTime: 81
+  - text: Ballingschap is de innerlijke wereld.
+    startTime: 81
+    endTime: 84
+  - text: Dus, wie ben jij tussen hen in?
+    startTime: 84
+    endTime: 87
+  - text: Ik definieer mezelf niet, opdat ik het niet verlies.
+    startTime: 87
+    endTime: 91
+  - text: En ik ben wie ik ben.
+    startTime: 91
+    endTime: 93
+  - text: Ik ben mijn andere zelf in een dualiteit die
+    startTime: 93
+    endTime: 97
+  - text: zich vermengt tussen taal en verwijzing.
+    startTime: 97
+    endTime: 100
+  - text: "Had ik po\xEBzie geschreven, zou ik hebben gezegd:"
+    startTime: 100
+    endTime: 104
+  - text: "Ik ben twee in \xE9\xE9n."
+    startTime: 104
+    endTime: 107
+  - text: Zoals de twee vleugels van een zwaluw.
+    startTime: 107
+    endTime: 110
+  - text: Als de lente laat zou komen,
+    startTime: 110
+    endTime: 113
+  - text: Zou ik tevreden zijn
+    startTime: 113
+    endTime: 116
+  - text: om de goede tijding te brengen.
+    startTime: 116
+    endTime: 120
+  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
+  StopId: 1
