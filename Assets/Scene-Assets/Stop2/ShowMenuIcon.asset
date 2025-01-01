@@ -20,3 +20,7 @@ MonoBehaviour:
     type: 3}
   avatarArabicPrefab: {fileID: 3561998431760403027, guid: 1bf37407c33579047a0e378ec42b2e66,
     type: 3}
+  avatarWomanPrefab: {fileID: 8567635787126344321, guid: 7f9543f3adbda5f48be8ef98c56e7cda,
+    type: 3}
+  avatarWomanArabicPrefab: {fileID: 8567635787126344321, guid: 174c2d41573869c4b90d804a0d4dc67b,
+    type: 3}
