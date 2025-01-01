@@ -68,6 +68,31 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Origin: Aleppo'
       objectReference: {fileID: 0}
+    - target: {fileID: 6093855693664485794, guid: e2212f7c42c8caf4b8ef7e72548e73ac,
+        type: 3}
+      propertyPath: dish
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6093855693664485794, guid: e2212f7c42c8caf4b8ef7e72548e73ac,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 44f28ed2c5fb7734fb224e35e0a2139e, type: 3}
+    - target: {fileID: 6093855693664485794, guid: e2212f7c42c8caf4b8ef7e72548e73ac,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c9e3910f33bda924da7041f6ef7de8cc, type: 3}
+    - target: {fileID: 6093855693664485794, guid: e2212f7c42c8caf4b8ef7e72548e73ac,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3f1237be62a8b5349a443e507c5d318c, type: 3}
+    - target: {fileID: 6093855693664485794, guid: e2212f7c42c8caf4b8ef7e72548e73ac,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c087bb6b29091242bd0d8ae87b731cc, type: 3}
     - target: {fileID: 7159765496909107208, guid: e2212f7c42c8caf4b8ef7e72548e73ac,
         type: 3}
       propertyPath: m_Name

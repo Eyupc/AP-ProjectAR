@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InfoCanvasDestroyer : MonoBehaviour
 {
-    void Update()
+    /*void Update()
     {
         if (Input.touchCount > 0)
         {
@@ -15,5 +15,10 @@ public class InfoCanvasDestroyer : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }*/
+
+    public void DestroyCanvas()
+    {
+        Destroy(gameObject);
     }
 }
