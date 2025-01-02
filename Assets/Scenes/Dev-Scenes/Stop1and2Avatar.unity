@@ -433,6 +433,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breathing Idle 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3561998431760403027, guid: 9349c5fa7d585a440b801fe88751bdcd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4189774953046053097, guid: 9349c5fa7d585a440b801fe88751bdcd,
         type: 3}
       propertyPath: m_LocalScale.x

@@ -25,6 +25,31 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Origin: Damascus'
       objectReference: {fileID: 0}
+    - target: {fileID: 3762311350060566410, guid: 7aef8620316a649eaa331f9d73c7841f,
+        type: 3}
+      propertyPath: dish
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762311350060566410, guid: 7aef8620316a649eaa331f9d73c7841f,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 58b345151cfd1ba4f81cf3b65dc8e316, type: 3}
+    - target: {fileID: 3762311350060566410, guid: 7aef8620316a649eaa331f9d73c7841f,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: fb4f95fbf22dcf544b474e7c11825e22, type: 3}
+    - target: {fileID: 3762311350060566410, guid: 7aef8620316a649eaa331f9d73c7841f,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 980d073450592a74498914fd0e41eb8b, type: 3}
+    - target: {fileID: 3762311350060566410, guid: 7aef8620316a649eaa331f9d73c7841f,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c03555c9d0cee34aa4725aeb72c9955, type: 3}
     - target: {fileID: 4552101946041004172, guid: 7aef8620316a649eaa331f9d73c7841f,
         type: 3}
       propertyPath: m_AnchoredPosition.y

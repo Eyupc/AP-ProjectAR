@@ -21,6 +21,7 @@ public class PlayPoem : MonoBehaviour
     {
         CreateSubtitleText();
         subtitleText.text = "";
+        Debug.Log("The script poem starts");
     }
 
     void CreateSubtitleText()

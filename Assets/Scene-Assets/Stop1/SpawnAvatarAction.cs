@@ -6,6 +6,8 @@ public class SpawnAvatarAction : QRActionBase
 {
     [SerializeField] private GameObject avatarPrefab;
     [SerializeField] private GameObject avatarArabicPrefab;
+    [SerializeField] private GameObject avatarWomanPrefab;
+    [SerializeField] private GameObject avatarArabicWomanPrefab;
     [SerializeField] private GameObject welcomeOverlayPrefab;
     public override string QRCodeText => "Poem";
     private Language language = new Language();
@@ -31,8 +33,16 @@ public class SpawnAvatarAction : QRActionBase
         Vector3 spawnPosition = userPosition + rightDirection * -2f;
         spawnPosition.y -= 1.7f;
         GameObject avatar = null;
-        if (language == Language.Dutch) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }
-        else { avatar = Instantiate(avatarArabicPrefab, spawnPosition, Quaternion.identity); }
+        if (character == Character.Man)
+        {
+            if (language == Language.Dutch) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }
+            else { avatar = Instantiate(avatarArabicPrefab, spawnPosition, Quaternion.identity); }
+        }
+        else 
+        {
+            if (language == Language.Dutch) { avatar = Instantiate(avatarWomanPrefab, spawnPosition, Quaternion.identity); }
+            else { avatar = Instantiate(avatarArabicWomanPrefab, spawnPosition, Quaternion.identity); }
+        }
 
         if (avatar != null)
         {

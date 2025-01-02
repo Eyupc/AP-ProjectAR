@@ -1,0 +1,298 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8802059569512200144
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5880142723812087609, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c856fe42f8fa4734bb65ff9a1916c9e7, type: 2}
+    - target: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_Name
+      value: Breathing Idle woman Arabic
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop1_Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5070724051505135828}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7748656462859157507}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1602371019964034008}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5714770404724570778}
+  m_SourcePrefab: {fileID: 100100000, guid: 3512e115e550cf04f9a0f2c73abd2bbe, type: 3}
+--- !u!1 &8567635787126344321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3512e115e550cf04f9a0f2c73abd2bbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 8802059569512200144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5070724051505135828
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567635787126344321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4b1b46b85276fe4d9676181a9da4db2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &7748656462859157507
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567635787126344321}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 912b04df32e224cc9a81d093468979c6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &1602371019964034008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567635787126344321}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5714770404724570778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567635787126344321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6d0f6872e5f4c4cbeba701b11669d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 7748656462859157507}
+  audioClip: {fileID: 8300000, guid: 89786a2bea0ca3b4db2f4092842f3406, type: 3}
+  subtitlePosition: {fileID: 0}
+  textHeight: 2
+  subtitles:
+  - text: "\u0622\u0647\u060C \u0635\u0627\u0628\u0648\u0646 \u062D\u0644\u0628 \u0627\u0644\u0634\u0647\u064A\u0631. "
+    startTime: 0
+    endTime: 2
+  - text: "\u0643\u0627\u0646 \u064A\u064F\u0635\u0646\u0639 \u064A\u062F\u0648\u064A\u064B\u0627
+      \u0641\u064A \u0628\u0644\u062F\u064A \u0645\u0646\u0630 \u0622\u0644\u0627\u0641
+      \u0627\u0644\u0633\u0646\u064A\u0646. "
+    startTime: 2
+    endTime: 4
+  - text: "\u064A\u064F\u0633\u062A\u062E\u062F\u0645 \u0641\u064A \u0635\u0646\u0639\u0647
+      \u0632\u064A\u062A \u0627\u0644\u0632\u064A\u062A\u0648\u0646 \u0627\u0644\u0646\u0642\u064A
+      \u0648\u0632\u064A\u062A \u0627\u0644\u063A\u0627\u0631. "
+    startTime: 5
+    endTime: 7
+  - text: "\u0625\u0646\u0647\u0627 \u062A\u0642\u0644\u064A\u062F \u062A\u0646\u0627\u0642\u0644\u062A\u0647
+      \u0627\u0644\u0639\u0627\u0626\u0644\u0627\u062A \u0639\u0628\u0631 \u0627\u0644\u0623\u062C\u064A\u0627\u0644. "
+    startTime: 7
+    endTime: 11
+  - text: "\u0647\u0630\u0627 \u0627\u0644\u0635\u0627\u0628\u0648\u0646 \u0645\u0646\u062A\u062C
+      \u0645\u0644\u064A\u0621 \u0628\u0627\u0644\u0639\u0646\u0627\u064A\u0629 \u0648\u0627\u0644\u062D\u0631\u0641\u064A\u0629. "
+    startTime: 11
+    endTime: 13
+  - text: "\u0643\u0627\u0646\u062A \u0632\u0648\u062C\u062A\u064A \u062A\u0628\u064A\u0639
+      \u0647\u0630\u0627 \u0627\u0644\u0635\u0627\u0628\u0648\u0646 \u0641\u064A
+      \u0645\u062A\u062C\u0631\u0647\u0627. "
+    startTime: 13
+    endTime: 15
+  - text: "\u0644\u0645 \u064A\u0643\u0646 \u0627\u0644\u0635\u0627\u0628\u0648\u0646
+      \u064A\u062C\u0644\u0628 \u0641\u0642\u0637 \u0627\u0644\u0646\u0638\u0627\u0641\u0629. "
+    startTime: 15
+    endTime: 20
+  - text: "\u0628\u0644 \u0643\u0627\u0646 \u064A\u062D\u0645\u0644 \u0642\u0637\u0639\u0629
+      \u0645\u0646 \u062B\u0642\u0627\u0641\u062A\u0646\u0627. "
+    startTime: 20
+    endTime: 25
+  - text: "\u0644\u0642\u062F \u0648\u0635\u0644 \u0647\u0630\u0627 \u0627\u0644\u0635\u0627\u0628\u0648\u0646
+      \u0625\u0644\u0649 \u0627\u0644\u0646\u0627\u0633 \u0641\u064A \u062C\u0645\u064A\u0639
+      \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0639\u0627\u0644\u0645.      "
+    startTime: 25
+    endTime: 27
+  garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
+  StopId: 1

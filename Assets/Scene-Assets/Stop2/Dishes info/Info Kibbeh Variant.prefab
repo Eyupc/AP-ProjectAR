@@ -8,6 +8,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 562083327727619633, guid: 0ea4d2fb7f50e473787fb57b1ff957f7,
+        type: 3}
+      propertyPath: dish
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 562083327727619633, guid: 0ea4d2fb7f50e473787fb57b1ff957f7,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 94d1d007534b4eb419ae5a2592aa44d1, type: 3}
+    - target: {fileID: 562083327727619633, guid: 0ea4d2fb7f50e473787fb57b1ff957f7,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0952835bf63cdfc4d95d0b26b7000080, type: 3}
+    - target: {fileID: 562083327727619633, guid: 0ea4d2fb7f50e473787fb57b1ff957f7,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c8ab7b9e3e59140499ab4e74be0e4bba, type: 3}
+    - target: {fileID: 562083327727619633, guid: 0ea4d2fb7f50e473787fb57b1ff957f7,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 60a66493f9707ca4b816c56877eaf322, type: 3}
     - target: {fileID: 2830323430194962537, guid: 0ea4d2fb7f50e473787fb57b1ff957f7,
         type: 3}
       propertyPath: m_text
