@@ -7,6 +7,7 @@ using System;
 using UnityEditor;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using System.Runtime.CompilerServices;
+using UnityEngine.SceneManagement;
 
 public class MenuActions : MonoBehaviour
 {
@@ -220,9 +221,11 @@ public class MenuActions : MonoBehaviour
 
     public void CompleteStop()
     {
+        Debug.Log("Completing Stop 2");
         UserSystemManager.CompleteStop(2);
         TrackingManager trackingManager = FindObjectOfType<TrackingManager>();
         trackingManager.EnableQRTracking();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

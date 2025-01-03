@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 2913597612682510831}
   - component: {fileID: 3174510817469617070}
   m_Layer: 5
-  m_Name: StopStartCanvas3 Arabic
+  m_Name: StopStartCanvas3 Arab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
