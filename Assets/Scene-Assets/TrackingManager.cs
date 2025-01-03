@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using HoloLab.ARFoundationQRTracking;
+using System.Collections;
 
 public class TrackingManager : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class TrackingManager : MonoBehaviour
     [SerializeField] private QRCodeTracker qrCodeTracker;
     [SerializeField] private MenuActions menuActions;
 
+    private bool isChangingTrackers = false;
+
     private void Awake()
     {
-        // Ensure references are found if not manually assigned
         if (qrTracker == null)
             qrTracker = FindObjectOfType<ARFoundationQRTracker>();
 
@@ -28,17 +30,36 @@ public class TrackingManager : MonoBehaviour
         if (menuActions == null)
             menuActions = FindObjectOfType<MenuActions>();
 
+        // Ensure both trackers start disabled
+        if (imageTracker != null) imageTracker.enabled = false;
+        if (qrTracker != null) qrTracker.enabled = false;
+
         // Default to QR tracking
-        EnableQRTracking();
+        StartCoroutine(EnableQRTrackingCoroutine());
     }
 
     public void EnableQRTracking()
     {
-        Debug.Log("ABC-" + imageTracker);
-        if (arSession != null)
+        if (!isChangingTrackers)
         {
-            arSession.Reset();
+            StartCoroutine(EnableQRTrackingCoroutine());
         }
+    }
+
+    public void EnableImageTracking()
+    {
+        if (!isChangingTrackers)
+        {
+            StartCoroutine(EnableImageTrackingCoroutine());
+        }
+    }
+
+    private IEnumerator EnableQRTrackingCoroutine()
+    {
+        isChangingTrackers = true;
+        Debug.Log("Enabling QR Tracking - Starting transition");
+
+        // First disable current tracking
         if (imageTracker != null)
         {
             imageTracker.enabled = false;
@@ -46,33 +67,65 @@ public class TrackingManager : MonoBehaviour
             Debug.Log("Image Tracking Disabled");
         }
 
-        if (qrTracker != null)
-        {
-            qrTracker.enabled = true;
-            qrCodeTracker.EnableTracking();
-            Debug.Log("QR Tracking Enabled");
-        }
-    }
-
-    public void EnableImageTracking()
-    {
+        // Reset session
         if (arSession != null)
         {
             arSession.Reset();
+            yield return new WaitForSeconds(0.5f); // Wait for session reset
         }
-        if (qrTracker != null)
+
+        // Enable QR tracking
+        if (qrTracker != null && qrCodeTracker != null)
         {
-            qrTracker.enabled = false;
+            qrTracker.enabled = true;
+            yield return new WaitForSeconds(0.2f); // Give the tracker time to initialize
+
+            qrCodeTracker.EnableTracking();
+            Debug.Log("QR Tracking Enabled");
+        }
+
+        isChangingTrackers = false;
+    }
+
+    private IEnumerator EnableImageTrackingCoroutine()
+    {
+        isChangingTrackers = true;
+        Debug.Log("Enabling Image Tracking - Starting transition");
+
+        // First disable current tracking
+        if (qrTracker != null && qrCodeTracker != null)
+        {
             qrCodeTracker.DisableTracking();
+            qrTracker.enabled = false;
             Debug.Log("QR Tracking Disabled");
         }
 
+        // Reset session
+        if (arSession != null)
+        {
+            arSession.Reset();
+            yield return new WaitForSeconds(0.5f); // Wait for session reset
+        }
+
+        // Enable image tracking
         if (imageTracker != null)
         {
             imageTracker.enabled = true;
+            yield return new WaitForSeconds(0.2f); // Give the tracker time to initialize
+
             imageTracker.trackedImagesChanged += menuActions.OnTrackedImagesChanged;
             Debug.Log("Image Tracking Enabled");
         }
 
+        isChangingTrackers = false;
+    }
+
+    private void OnDisable()
+    {
+        // Cleanup event handlers
+        if (imageTracker != null)
+        {
+            imageTracker.trackedImagesChanged -= menuActions.OnTrackedImagesChanged;
+        }
     }
 }

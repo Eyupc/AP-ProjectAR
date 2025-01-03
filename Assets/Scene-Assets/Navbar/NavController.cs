@@ -21,9 +21,12 @@ public class NavController : MonoBehaviour
                 Debug.Log("Home canvas is now visible.");
                 break;
             case "Map":
-                mapCanvas.SetActive(true);
-                mapCanvas.GetComponent<WebViewObject>().SetVisibility(true);
-                Debug.Log(" Map is now visible.");
+                if (mapCanvas != null)
+                {
+                    mapCanvas.SetActive(true);
+                    mapCanvas.GetComponent<WebViewObject>()?.SetVisibility(true);
+                    Debug.Log(" Map is now visible.");
+                }
                 break;
             default:
                 break;

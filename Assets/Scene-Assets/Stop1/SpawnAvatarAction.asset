@@ -22,3 +22,5 @@ MonoBehaviour:
     type: 3}
   welcomeOverlayPrefab: {fileID: 7080766145719088569, guid: 99526aed8dffc4422955015caab09ad1,
     type: 3}
+  welcomeOverlayPrefabArabic: {fileID: 7080766145719088569, guid: c9e8fb5334886384fb0f624bdccbe70b,
+    type: 3}

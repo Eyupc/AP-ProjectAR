@@ -1,7 +1,6 @@
 using HoloLab.ARFoundationQRTracking;
-using UnityEngine;
 using System.Collections.Generic;
-using System;
+using UnityEngine;
 
 public class QRCodeTracker : MonoBehaviour
 {
@@ -41,11 +40,13 @@ public class QRCodeTracker : MonoBehaviour
     {
         IsTracking = false;
         UnsubscribeFromQRTracker();
-
+        executedActions.Clear();
+        lastTrackingTimes.Clear();
         foreach (var codeId in new List<string>(trackedQRObjects.Keys))
         {
             RemoveQRCode(codeId);
         }
+        trackedQRObjects.Clear();
     }
 
     private void SubscribeToQRTracker()
@@ -64,36 +65,26 @@ public class QRCodeTracker : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void QRTracker_OnTrackedQRImagesChanged(ARTrackedQRImagesChangedEventArgs eventArgs)
     {
-        List<string> codesToRemove = new List<string>();
-        float currentTime = Time.time;
+        Debug.Log($"QR code count: {eventArgs.Added.Count} {eventArgs.Updated.Count} {eventArgs.Removed.Count}");
 
-        foreach (var tracking in lastTrackingTimes)
+        foreach (var addedQR in eventArgs.Added)
         {
-            if (currentTime - tracking.Value > trackingTimeout)
-            {
-                codesToRemove.Add(tracking.Key);
-            }
+            Debug.Log($"Marker detected: {addedQR.Text}");
+            CreateOrUpdateQRObject(addedQR);
         }
 
-        foreach (var codeId in codesToRemove)
+        foreach (var updatedQR in eventArgs.Updated)
         {
-            RemoveQRCode(codeId);
-        }
-    }
-
-    private void RemoveQRCode(string codeId)
-    {
-        Debug.Log($"QR code lost (timeout): {codeId}");
-
-        if (trackedQRObjects.TryGetValue(codeId, out GameObject qrObject))
-        {
-            Destroy(qrObject);
-            trackedQRObjects.Remove(codeId);
+            Debug.Log($"Marker updated: {updatedQR.Text}");
+            CreateOrUpdateQRObject(updatedQR);
         }
 
-        lastTrackingTimes.Remove(codeId);
+        foreach (var removedQR in eventArgs.Removed)
+        {
+            RemoveQRCode(removedQR.Text);
+        }
     }
 
     private void CreateOrUpdateQRObject(ARTrackedQRImage qrImage)
@@ -128,30 +119,16 @@ public class QRCodeTracker : MonoBehaviour
         lastTrackingTimes[qrImage.Text] = Time.time;
     }
 
-    private void QRTracker_OnTrackedQRImagesChanged(ARTrackedQRImagesChangedEventArgs eventArgs)
+    private void RemoveQRCode(string codeId)
     {
-        Debug.Log($"QR code count: {eventArgs.Added.Count} {eventArgs.Updated.Count} {eventArgs.Removed.Count}");
+        Debug.Log($"QR code lost (timeout): {codeId}");
 
-        foreach (var addedQR in eventArgs.Added)
+        if (trackedQRObjects.TryGetValue(codeId, out GameObject qrObject))
         {
-            Debug.Log($"Marker detected: {addedQR.Text}");
-            CreateOrUpdateQRObject(addedQR);
+            Destroy(qrObject);
+            trackedQRObjects.Remove(codeId);
         }
 
-        foreach (var updatedQR in eventArgs.Updated)
-        {
-            Debug.Log($"Marker updated: {updatedQR.Text}");
-            CreateOrUpdateQRObject(updatedQR);
-        }
-
-        foreach (var removedQR in eventArgs.Removed)
-        {
-            RemoveQRCode(removedQR.Text);
-        }
-    }
-
-    private void OnDestroy()
-    {
-        UnsubscribeFromQRTracker();
+        lastTrackingTimes.Remove(codeId);
     }
 }

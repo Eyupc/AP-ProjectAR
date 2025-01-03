@@ -16,6 +16,8 @@ MonoBehaviour:
     type: 3}
   welcomeOverlayPrefab: {fileID: 7080766145719088569, guid: 39aea9edf46f74d6fbf0e2c628b72eab,
     type: 3}
+  welcomeOverlayPrefabArabic: {fileID: 7080766145719088569, guid: 271c2370fce02824e93dcf6d1379af02,
+    type: 3}
   avatarPrefab: {fileID: 3561998431760403027, guid: 9349c5fa7d585a440b801fe88751bdcd,
     type: 3}
   avatarArabicPrefab: {fileID: 3561998431760403027, guid: 1bf37407c33579047a0e378ec42b2e66,
