@@ -1,8 +1,8 @@
 using UnityEngine;
 public enum Character
 {
-    Man = 0,
-    Woman = 1
+    Woman = 0,
+    Man = 1
 }
 
 public enum Language
