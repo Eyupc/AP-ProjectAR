@@ -9,6 +9,7 @@ public class SpawnAvatarAction3 : QRActionBase
     [SerializeField] private GameObject welcomeOverlayPrefab;
     [SerializeField] private GameObject avatarWomanPrefab;
     [SerializeField] private GameObject avatarWomanArabicPrefab;
+    [SerializeField] private GameObject welcomeOverlayPrefabArabic;
     private Language language = new Language();
     private Character character = new Character();
     public override string QRCodeText => "AleppoSoap";
@@ -18,7 +19,7 @@ public class SpawnAvatarAction3 : QRActionBase
         Camera mainCamera = Camera.main;
         if (mainCamera != null)
         {
-            GameObject overlayObj = Instantiate(welcomeOverlayPrefab);
+            GameObject overlayObj = Instantiate(UserSystemManager.Language == Language.Dutch ? welcomeOverlayPrefab : welcomeOverlayPrefabArabic);
             overlayObj.GetComponent<StopStartCanvasHandler>().OnCloseClicked += SpawnAvatar;
             language = UserSystemManager.Language;
             character = UserSystemManager.Character;
@@ -33,6 +34,7 @@ public class SpawnAvatarAction3 : QRActionBase
         Vector3 spawnPosition = userPosition + rightDirection * -2f;
         spawnPosition.y -= 1.7f;
         GameObject avatar = null;
+
         if (language == Language.Dutch)
         {
             if (character == Character.Man) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }

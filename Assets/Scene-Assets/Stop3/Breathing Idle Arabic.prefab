@@ -198,7 +198,7 @@ MonoBehaviour:
     startTime: 18
     endTime: 22
   garamondFont: {fileID: 11400000, guid: ac3888cca6b0c4c43a5b162dca9a118d, type: 2}
-  StopId: 1
+  StopId: 3
 --- !u!82 &-5248752376949655281
 AudioSource:
   m_ObjectHideFlags: 0

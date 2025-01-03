@@ -5,6 +5,7 @@ public class ShowMenuIcon : QRActionBase
 {
     [SerializeField] private GameObject menuIconCanvasPrefab;
     [SerializeField] private GameObject welcomeOverlayPrefab;
+    [SerializeField] private GameObject welcomeOverlayPrefabArabic;
     [SerializeField] private GameObject avatarPrefab;
     [SerializeField] private GameObject avatarArabicPrefab;
     [SerializeField] private GameObject avatarWomanPrefab;
@@ -17,7 +18,7 @@ public class ShowMenuIcon : QRActionBase
     {
         if (menuIconCanvasPrefab != null && welcomeOverlayPrefab != null && avatarPrefab != null && avatarArabicPrefab != null)
         {
-            GameObject overlayObj = Instantiate(welcomeOverlayPrefab);
+            GameObject overlayObj = Instantiate(UserSystemManager.Language == Language.Dutch ? welcomeOverlayPrefab : welcomeOverlayPrefabArabic);
             overlayObj.GetComponent<StopStartCanvasHandler>().OnCloseClicked += SpawnMenuIcon;
         }
         else
@@ -44,10 +45,10 @@ public class ShowMenuIcon : QRActionBase
             GameObject avatar = null;
             if (language == Language.Dutch)
             {
-                if(character == Character.Man) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }
+                if (character == Character.Man) { avatar = Instantiate(avatarPrefab, spawnPosition, Quaternion.identity); }
                 else { avatar = Instantiate(avatarWomanPrefab, spawnPosition, Quaternion.identity); }
             }
-            else 
+            else
             {
                 if (character == Character.Man) { avatar = Instantiate(avatarArabicPrefab, spawnPosition, Quaternion.identity); }
                 else { avatar = Instantiate(avatarWomanArabicPrefab, spawnPosition, Quaternion.identity); }
