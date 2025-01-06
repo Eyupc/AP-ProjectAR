@@ -11,7 +11,7 @@ public class SpawnAvatarAction : QRActionBase
     [SerializeField] private GameObject welcomeOverlayPrefab;
     [SerializeField] private GameObject welcomeOverlayPrefabArabic;
 
-    public override string QRCodeText => "Poem";
+    public override string QRCodeText => "poem";
     private Language language = new Language();
     private Character character = new Character();
 
