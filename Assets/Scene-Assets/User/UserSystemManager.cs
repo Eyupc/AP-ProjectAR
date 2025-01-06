@@ -41,8 +41,8 @@ public static class UserSystemManager
     private static void InitializeDefaultStops()
     {
         userData.stops.Add(new StopData(1, "Poem"));
-        userData.stops.Add(new StopData(2, "Restaurant"));
-        userData.stops.Add(new StopData(3, "AleppoSoap"));
+        userData.stops.Add(new StopData(3, "Restaurant"));
+        userData.stops.Add(new StopData(5, "AleppoSoap"));
         SaveData();
     }
 
@@ -68,11 +68,11 @@ public static class UserSystemManager
                     var obj = GameObject.FindWithTag("Stop1_Player");
                     if (obj != null) GameObject.Destroy(obj);
                     break;
-                case 2:
+                case 3:
                     var menuCanvasObj = GameObject.FindWithTag("MenuCanvas");
                     menuCanvasObj.SetActive(false);
                     break;
-                case 3:
+                case 5:
                     break;
                 default:
                     break;

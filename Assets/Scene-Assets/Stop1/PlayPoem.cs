@@ -78,7 +78,7 @@ public class PlayPoem : MonoBehaviour
             }
             else if (StopId == 3)
             {
-                UserSystemManager.CompleteStop(3);
+                UserSystemManager.CompleteStop(5);
             }
             OnPoemEnd.Invoke();
         }

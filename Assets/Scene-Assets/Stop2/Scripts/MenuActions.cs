@@ -222,7 +222,7 @@ public class MenuActions : MonoBehaviour
     public void CompleteStop()
     {
         Debug.Log("Completing Stop 2");
-        UserSystemManager.CompleteStop(2);
+        UserSystemManager.CompleteStop(3);
         TrackingManager trackingManager = FindObjectOfType<TrackingManager>();
         trackingManager.EnableQRTracking();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
